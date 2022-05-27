@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adcionando elemento</title>
+
+    <style>
+        .container{
+            border: 1px solid  lightgrey;
+            padding: 20px;
+            margin: 20px;
+        }
+
+        .container:nth-child(2){
+            margin-top: 100px;
+        }
+
+        p{
+            background-color: red;
+            color: white;
+        }
+
+        #div3{
+            margin-top: 150px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        insertAdjacentText
+    </div>
+
+    <div class="container" id="div">
+        insertAdjacentHTML
+     </div>
+
+     <div id="div3">
+        insertAdjacentElement
+     </div>
+
+    <script>
+       let div = document.querySelector('.container') //a div vai ser a referencia
+
+      //insertAdjacentText
+      div.insertAdjacentText('beforebegin', 'AAAAA')
+      div.insertAdjacentText('afterbegin', 'BBBBB')
+      div.insertAdjacentText('beforeend', 'CCCCCC')
+      div.insertAdjacentText('afterend', 'DDDD')
+
+
+       //insertAdjacentHTML
+       let div2 = document.querySelector('#div')
+       
+       div2.insertAdjacentHTML('beforebegin','<p>paragrafo</p>')
+       div2.insertAdjacentHTML('afterbegin','<h4>titulo 4</h4>')
+       div2.insertAdjacentHTML('beforeend','<span>um span</span>')
+       div2.insertAdjacentHTML('afterend','<hr>') //coloquei uma regua aqui
+
+
+       //insertAdjacentElement  >> mais legal
+       let div3 = document.querySelector('#div3')
+       let paragrafo = document.createElement('p')
+       paragrafo.innerHTML = 'texto'
+
+       div3.insertAdjacentElement('beforeend',paragrafo)
+    </script>
+</body>
+</html>

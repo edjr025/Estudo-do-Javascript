@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operador Spread</title>
+</head>
+<body>
+    <h1>Treinamento JS</h1>
+
+    <script>
+       let primeiro = [1,2,3]
+       let segundo = [10,20,30]
+       
+       //juntando array com o spread
+       let combinado = [...primeiro, ...segundo]
+       console.log(combinado)
+
+       let combinado2 = [...primeiro, 'ab', ...segundo, 'x']
+       console.log(combinado2)
+
+       //clonar um array com o spread
+       let clone = [...combinado]
+       console.log('meu array clonado', clone)
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Função Some</title>
+</head>
+<body>
+    <h1>Metodos Avançados de Array(Some)</h1>
+
+    <p id="msg"></p>
+    <p id="msg1"></p>
+    <p id="msg2"></p>
+    <p id="msg3"></p>
+    <p id="msg4"></p>
+    <p id="msg5"></p>
+    <p id="msg6"></p>
+    <p id="msg7"></p>
+
+
+    <script>
+        
+        const numbers = [2, 3, 4, 5, 7, 12, 19,]
+        document.getElementById('msg').innerHTML = numbers
+
+        //verificando se tem numeros primos
+        /*1º vamos criar uma função q determina se um numero é primo ou não e depois passa-la com 
+        parametro para a função Some()
+        */
+
+        function ePrimo(valor){
+            for(i = 2; i < valor ; i++){
+                if(valor % i == 0){
+                    return false
+                }
+            }
+            return valor > 1
+        }
+        document.getElementById('msg1').innerHTML = numbers.some(ePrimo)
+
+        /*
+        segundo exemplo, verificar por condições em valores/objetos
+        nesse exemplo vamos ver se existem pilotos no objeto
+        */
+
+        const team = [
+            {id: 12, nome: 'Trump', piloto: true},
+            {id: 12, nome: 'Bolsonaro', piloto: false},
+            {id: 12, nome: 'Putin', piloto: true},
+            {id: 12, nome: 'Xi Jiping', piloto: false},
+        ]
+
+        document.getElementById('msg2').innerHTML = team.some((pessoa => pessoa.piloto))
+    </script>
+</body>
+</html>

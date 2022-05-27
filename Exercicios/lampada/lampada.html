@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lampada</title>
+</head>
+<body>
+    <h1>Lampada</h1>
+
+    <img src="off.jpg" alt="lampada" id="lampada">
+    <form>
+        <input class="btn" type="button" value="ON" onclick="on()">
+        <input class="btn" type="button" value="OFF" onclick="off()">
+        <input id="quebrar" type="button" value="BLINK" onclick="blink()">
+    </form>
+
+    <script>
+    
+        function on(){
+            document.getElementById('lampada').src = 'on.jpg' 
+        }
+
+        function off(){
+            document.getElementById('lampada').src = 'off.jpg'
+        }
+
+         function blink(){
+            var intervalo = 0
+            var contador = 0
+            while(contador < 10){
+                intervalo += 300;
+                setTimeout("document.getElementById('lampada').src = 'on.jpg' ", intervalo)
+                intervalo += 300;
+                setTimeout("document.getElementById('lampada').src = 'off.jpg' ", intervalo)
+                contador++
+            }
+         }
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>evitando modificações</title>
+</head>
+<body>
+    
+    <script>
+        //Object.preventExtensions >> vc excluir e muda os atributos existentes, mas não inclui novos atributos
+        const produto = Object.preventExtensions({
+            nome: 'Qualquer', preco: 1.99, tag:'promoção' 
+        })
+
+        console.log('Extensivel:', Object.isExtensible(produto))
+
+        produto.nome = 'Borracha'
+        produto.descricao = 'Borracha escolar branca'
+        delete produto.tag
+        console.log(produto)
+
+        //object.seal  >>> só consegue editar os atributos
+        const pessoa = {nome: 'juliana', idade: 35}
+        Object.seal(pessoa)
+        console.log('Seledo:', Object.isSealed(pessoa))
+
+        pessoa.sobrenome = 'Silva'
+        delete pessoa.nome
+        pessoa.idade = 29
+        console.log(pessoa)
+    </script>
+</body>
+</html>

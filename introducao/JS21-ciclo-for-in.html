@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciclo FOR IN</title>
+</head>
+<body>
+    <h1>FOR IN</h1>
+
+
+    <script>
+      //primeiro criaremos um objeto para consumi-lo no For in
+
+      var pessoas = {
+          nome: 'Pedro',
+          idade: '25',
+          Profissão: 'Programador Junior',
+      }
+
+     for(p in pessoas){
+         document.write(pessoas[p] + '</br>')
+     }
+
+     document.write('</br>')
+     document.write('</br>')
+     document.write('</br>')
+
+     var nomes = ['Maria', 'João', 'Marta', 'Pedro']
+
+     for(var n in nomes){
+         document.write(n, ' -- ',  nomes[n], '</br>')
+     }
+     //o n é o indice
+     //nomes são os valores
+
+
+    </script>
+</body>
+</html>

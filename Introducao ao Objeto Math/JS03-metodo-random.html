@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodo Random</title>
+</head>
+<body>
+    <h1>Metodo Random</h1>
+
+    <p id="msg"></p>
+    <p id="newmsg"></p>
+    <p id="ms3"></p>
+    <p id="msg2"></p>
+    <p id="msg3"></p>
+
+    <script>
+
+        //gerando numeros aleatorios entre 0 e 1
+        var numero = Math.random()
+        //gerando numeros aleatorios entre 1 e 10
+        var numero2 = Math.random() * 10
+
+        //gerando numeros aleatorio e arredondando pra baixo com o floor
+        var numero3 = Math.floor(Math.random()*10)
+
+
+        document.getElementById('msg').innerHTML = numero
+
+        document.getElementById('newmsg').innerHTML = numero2
+
+        document.getElementById('ms3').innerHTML = numero3
+
+        //valor aleatorio entre 10 e 20
+        document.getElementById('msg2').innerHTML = aleatorio(10,20)
+
+        //criando uma função que gera numeros aleatorios entre um valor min e max
+        function aleatorio(min, max){
+            var valor = Math.floor(Math.random() * (max-min)) + min
+            //esse + min no final vai definir o valor do minimo até o anterior ao max, EX 10, 11 .... 19
+            return valor
+        }
+
+
+    </script>
+</body>
+</html>

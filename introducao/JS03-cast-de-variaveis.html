@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cast de Variaveis</title>
+</head>
+<body>
+    <h1>Cast de Variaveis</h1>
+
+
+    <script>
+       //declaração de uma variavel valor
+        var valor = '100'
+        document.write('variavel valor =>  ', valor)
+        document.write('</br>')
+
+       //fazendo a soma sem o cast de variavel >> isso irá concatenar os valores
+        var semCast = valor + 200 
+        document.write('variavel semCast =>  ', semCast)
+        document.write('</br>')
+        
+       //fazendo o cast e trasformando a string 100 em um numero com o parseInt
+       var castVariavel = parseInt(valor) + 200
+       document.write('variavel castVariavel =>  ', castVariavel)
+    </script>
+</body>
+</html>

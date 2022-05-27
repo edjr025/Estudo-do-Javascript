@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Igualdade de Objetos</title>
+</head>
+<body>
+    <h1>Treinamento JS</h1>
+
+    <script>
+        //esse exercicio é para identifica se existe objetos com mesma propriedade e endereço de memoria
+
+       function Endereco(rua, cidade, cep){
+           this.rua = rua
+           this.cidade = cidade
+           this.cep = cep
+       }
+
+       const endereço1 = new Endereco('a', 'b', 'c')
+       const endereço2 = new Endereco('a', 'b', 'c')
+
+       const endereco3 = endereço1
+
+       function saoIguais(endereço1, endereço2){
+            //comparar se as propriedades são iguais
+            return endereço1.rua === endereço2.rua &&
+            endereço1.cidade === endereço2.cidade &&
+            endereço1.cep === endereço2.cep
+       }
+
+       console.log(saoIguais(endereço1,endereço2))
+
+       function temEnderecoDeMemoriaIguais(endereço1, endereço2){
+           //comparando se a referencia do objeto aponta pra o msm endereco de memoria
+           return endereço1 === endereço2
+       }
+
+       console.log(temEnderecoDeMemoriaIguais(endereço1, endereço2))
+       //deu falso aqui então quer dizer q os endereços 1 e 2 apontam pra locais diferentes
+
+       console.log(temEnderecoDeMemoriaIguais(endereço1,endereco3))
+       //agora deu verdade pois o endereço 1 e 3 tem o mesmo endereço de memoria
+       //aqui deu true pq passamos a referencia de onde o objeto endereco1 tava para o
+       //endereco3 
+    </script>
+</body>
+</html>

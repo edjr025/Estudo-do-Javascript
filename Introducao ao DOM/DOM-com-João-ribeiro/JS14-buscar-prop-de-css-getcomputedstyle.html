@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> BUSCAR PROPRIEDADES DE CSS E GETCOMPUTEDSTYLE</title>
+
+    <style>
+        h1{
+            background-color: yellow;
+            color: black;
+            padding: 10px;
+            border: 1px solid gray;
+        }
+    </style>
+</head>
+<body>
+    <h1>BUSCAR PROPRIEDADES DE CSS E GETCOMPUTEDSTYLE</h1>
+
+    <p style="color: hsl(240,100%,50%); margin-top: 20px;">Lorem ipsum dolor sit amet.</p>
+
+    <script>
+        let p = document.querySelector('p')
+        console.log(p.style.color)
+        console.log(p.style.marginTop)
+
+        let h1 = document.querySelector('h1')
+        console.log(h1.style.color) //ele não pega pois só serve para o css inline
+
+        //para funcionar o codigo de cima kuinha 29 devemos fazer:
+        let propriedades = getComputedStyle(document.querySelector('h1'))
+        console.log(propriedades.color)
+        console.log(propriedades.marginTop)
+        console.log(propriedades.border)
+        console.log(propriedades.borderWidth)
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Função Includes</title>
+</head>
+<body>
+    <h1>Metodos Avançados de Array(Includes)</h1>
+
+    <p id="msg"></p>
+    <p id="msg1"></p>
+    <p id="msg2"></p>
+    <p id="msg3"></p>
+    <p id="msg4"></p>
+    <p id="msg5"></p>
+    <p id="msg6"></p>
+    <p id="msg7"></p>
+
+
+    <script>
+        //includes serve para dizer se um determinado valor existe dentro do array
+        const numbers = [2, 3, 4, 5]
+        document.getElementById('msg').innerHTML = numbers
+
+        const temNumero = numbers.includes(4)
+        document.getElementById('msg1').innerHTML = temNumero
+
+        const pessoas = ['Maria', 'Ivan', 'Ana', 'Beatriz']
+
+        const temPessoa = pessoas.includes('João')
+        document.getElementById('msg2').innerHTML = temPessoa
+
+        const alunos = ['Lucas', 'Carol', 'Felipe', 'Mateus', 'Carolina', 'Ana Beatriz', 'Ana Caroline']
+        document.getElementById('msg3').innerHTML = alunos
+
+        const filtrarAlunos = alunos.filter(p => p.includes('Carol'))
+        document.getElementById('msg4').innerHTML = filtrarAlunos
+    </script>
+</body>
+</html>

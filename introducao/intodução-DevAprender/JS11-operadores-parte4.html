@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores parte 3</title>
+</head>
+<body>
+    <h1>Treinamento JS</h1>
+
+    <script>
+        /*
+            operadores no javascript
+
+                -operadores matematicos
+                -operadores atribuição
+                -operadores comparação
+                -operadores logicos
+                -operadores bitwise
+
+            operadores matematicos >> +(adição) -(subtração) *(multiplicação) /(divisão) **(exponencial)
+            
+            obs: temos tbm o ++ e o -- (operadores de incremento e decremento)
+        */
+
+        /*
+            operadores Logicos
+                 &&(E) ambas condições tem q ser verdadeiras
+                 ||(OU) apenas uma condição precisa ser verdadeira
+                 !(not) inverter o valor logico
+
+            OBS: a resposta é sempre um booleano     
+        */
+
+        console.log(true && true)
+        console.log(true && false)
+        console.log(true || true)
+        console.log(true || false)
+        console.log(!true)
+        console.log(!false)
+
+        let maiorDeidade = true
+        let possuiCarteiraDeTrabalho = true
+
+        let podeTrabalhar = maiorDeidade && possuiCarteiraDeTrabalho
+        console.log('essa pessoa pode trabalhar? ', podeTrabalhar)
+
+
+    </script>
+</body>
+</html>

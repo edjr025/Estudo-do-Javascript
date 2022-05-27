@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Métodos Pop, Push e Shift</title>
+</head>
+<body>
+    <h1>Métodos Pop, Push e Shift</h1>
+
+    <p id="msg"></p>
+    <p id="tam"></p>
+
+    <script>
+       var nomes = ['Andre', 'Bruna','Carlos', 'Daniel']
+       var times = ['Flamengo', 'Vasco', 'Palmeiras', 'Corinthians']
+
+       document.write('o array de nomes é: ', nomes, '</br>')
+       document.write('o array de times é: ', times)
+       document.write('</br>')
+
+       //usando o metodo Pop pra tirar o ultimo indice do array
+       document.write('tirados do array do nomes o: ', nomes.pop(), '</br>')
+       document.write('o novo array de nomes é: ', nomes, '</br>')
+       document.write('</br>')
+
+       //usando o metodo push para incluir um valor no final do array
+       document.write('acrescentado um time no array de times: ', times.push('Grêmio'), '</br>')
+       document.write('o novo array de times é: ', times, '</br>')
+
+       //usando o metodo shift para excluir um valor no inicio do array
+       document.write('retirando um time do inicio do array de times: ', times.shift(), '</br>')
+       document.write('o novo array de times é: ', times, '</br>')
+
+
+
+    </script>
+</body>
+</html>

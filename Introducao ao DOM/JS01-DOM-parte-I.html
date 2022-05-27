@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <h1>Intrdução ao DOM</h1>
+
+    <p id="texto"></p>
+
+    <div></div>
+    <div></div>
+
+    <p></p>
+    <p></p>
+    <p></p>
+
+    <script>
+        //pegando um elemento pelo id e inserindo um texto nele
+        var paragrafo = document.getElementById('texto')
+        paragrafo.innerHTML = 'manipulei a DOM com o getElementById'
+
+        //pegando um elemento pelo nome da TAG e inserindo um texto nele
+        var caixa = document.getElementsByTagName('div')
+        //quando usamos o getElementsByTagName temos q especificar o indice da tag entre colchete ex: [0]
+        caixa[0].innerHTML = 'essa é a 1ª div manipulada pelo DOM com o getElementsByTagName'
+        caixa[1].innerHTML = 'essa é a 2ª div manipulada pelo DOM com o getElementsByTagName'
+
+       
+    </script>
+</body>
+</html>

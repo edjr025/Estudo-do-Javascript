@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Funções de Array JavaScript - Aula 8 (final) - API real!</h1>
+
+    <div id="pessoa"></div>
+
+    <script>
+        //consultando uma API, vamos usar o async wait a principio
+        async function obterPessoas(){
+            //vamos usar a https://randomuser.me/api/  colocondo o break point em ? ?results=10 para trazer 20 resultados
+            const response = await fetch ('https://randomuser.me/api/?results=20')
+            //retornando um json da api
+            return response.json()
+        }
+         //testando o retorno
+        // obterPessoas().then(data => console.log(data))
+
+        //buscando só as mulheres
+        obterPessoas().then(dados => {
+            const pessoas = dados.results
+            //mostrando apenas as mulheres no console
+            console.log(pessoas.filter(m => m.gender == 'female'))
+             
+        })
+
+        //trazendo o nome sexo e outras info das pessoas
+        obterPessoas().then(dados => {
+            const resultado = dados.results
+            const pessoas = []
+            for(let p of resultado){
+                pessoas.push({
+                    'nome': `${ p.name.first } ${p.name.last}`,
+                    'sexo':  p.gender,
+                    'idade': p.dob.age
+
+                })
+            }
+
+            console.log(pessoas)
+            console.table(pessoas)
+             
+        })
+
+        //trazendo pessoas acima de 40 anos
+        obterPessoas().then(dados => {
+            const resultado = dados.results.filter( pessoas => pessoas.dob.age >= 40)
+            const acimaDe40 = []
+            for(let p of resultado){
+                acimaDe40.push({
+                    'nome': `${ p.name.first } ${p.name.last}`,
+                    'sexo':  p.gender,
+                    'idade': p.dob.age
+
+                })
+            }
+
+            console.table(acimaDe40)
+             
+        })
+
+    </script>
+</body>
+</html>

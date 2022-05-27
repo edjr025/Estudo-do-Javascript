@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring</title>
+</head>
+<body>
+    <h1>Destructuring</h1>
+
+    <button onclick="mostrar()">Destructuring</button>
+
+    <script>
+
+        //sem o uso do Destructuring era assim
+        var nomes = ['Maria', 'João', 'Pedro']
+
+        var n1 = nomes[0]
+        var n2 = nomes[1]
+        var n3 = nomes[2]
+
+        document.write(n1 + '--' + n2 + '--' + n3 + '</br>')
+
+        //com o uso do Destructuring o que foi feito da forma acima fica assim
+
+        //isso aqui é exemplo de Destructuring
+        var [n4, n5, n6] = nomes
+        document.write('usando o Destructuring: ' + n4 + '--' + n5 + '--' + n6 + '</br>')
+
+        //uso do Destructuring em objetos
+        let aluno = {
+            nome: 'José',
+            idade: 30,
+            nacionalidade: 'Brasileira'
+        }
+
+        let {nome, idade, nacionalidade} = aluno
+        document.write('nome: ' + nome + ' idade: ' + idade + ' anos' + ' nacionalidade ' + nacionalidade)
+
+        function mostrar(){
+            //novo exemplo de Destructuring um pouco diferente dos outros de cima
+            let valores = [1,2,3]
+            //oberse aqui q o D e o E não existem no array valores
+            let [a=10, b=15, c, d=50, e] = valores 
+
+            document.write(a + '--' + b + '--' + c + '--' + d + '--' + e)
+        }
+
+
+        const pessoa = {
+            name: 'Elton',
+            age: 26
+        }
+
+
+        //usando o destrutiring em objetos
+        const {name} = pessoa
+        console.log(name)
+        const {age} = pessoa
+        console.log(age)
+
+        //pegando uma propriedade do objeto e renomeando ele
+        const {age: anosDeVida} = pessoa
+        console.log(anosDeVida)
+
+
+        //usando o destrutiring em arrays
+        const fruits = ['acerola', 'banana', 'cereja']
+
+        const [fruta1, fruta2, fruta3] = fruits
+        console.log(fruta1, fruta2, fruta3)
+
+        //pegar só a ultima frutas do array
+        const [,,ultima] = fruits
+        console.log(ultima)
+
+        /*
+        pegar uma fruta e o resto  >>> o nome do operator é rest, mas vc pode escrever qualquer nome,
+         o que vale mesmo é os 3 pontinhos
+        */
+        const [b, ...resto] = fruits
+        console.log(b, resto)
+    </script>
+</body>
+</html>

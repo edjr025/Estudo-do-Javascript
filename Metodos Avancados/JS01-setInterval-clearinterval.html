@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SetInterval e ClearInterval</title>
+</head>
+<body>
+    <h1>SetInterval e ClearInterval para execução de funções de x em x tempo</h1>
+
+    <p id="msg"></p>
+    <p id="msg2"></p>
+    <button onclick="executar()">Executar</button>
+    <button onclick="parar()">Parar</button>
+
+    <button onclick="contar()">Contar</button>
+    <button onclick="stoped()">Stopar</button>
+
+    <script>
+
+        var tempo
+        var num = 0
+
+        function executar(){
+
+             tempo = setInterval(function executar(){
+                 tick()
+            },1000)
+        }
+
+        function tick(){
+            document.getElementById('msg').innerHTML = new Date().toLocaleTimeString()
+        }
+
+
+
+        function parar(){
+            clearInterval(tempo);
+        }
+
+
+
+        //mini contatdo
+        function contar(){
+            tempo = setInterval(function contar(){
+                 contatador()
+            },100)
+        }
+
+        function contatador(){
+            document.getElementById('msg').innerHTML = 'tempo: ' + num++
+        }
+
+        function stoped(){
+            clearInterval(tempo)
+        }
+    </script>
+</body>
+</html>

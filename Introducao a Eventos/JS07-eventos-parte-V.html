@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos parte V</title>
+
+    <style type="text/css">
+        input:nth-child(5){
+            width: 250px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <h1>Eventos  onchange, onkeypress, onkeydown e onkeyup</h1>
+
+    <p id="texto">mensagem</p>
+
+    <input type="text" id="t1" placeholder="digite algo" value="texto">
+    <input type="text" id="t2">
+    <input type="text" id="t3" placeholder="clique aqui pressione uma tecla e solte">
+
+    <script>
+
+      var texto1 = document.getElementById('t1')
+      var texto2 = document.getElementById('t2')
+      var texto3 = document.getElementById('t3')
+      var msg = document.getElementById('texto')
+
+      texto1.onchange = function(){mudarTexto()}
+
+      function mudarTexto(){
+          msg.innerHTML = 'texto alterado'
+      }
+
+      texto2.onkeypress = function(){teclaPressionada()}
+
+      function teclaPressionada(){
+          msg.innerHTML = 'tecla pressionada no segundo input'
+      }
+
+      texto3.onkeydown = function(){pressionarTecla()}
+      texto3.onkeyup = function(){soltarTecla()}
+
+      function pressionarTecla(){
+          msg.innerHTML = 'tecla pressionada'
+      }
+
+      function soltarTecla(){
+          msg.innerHTML = 'tecla liberada'
+      }
+    </script>
+</body>
+</html>

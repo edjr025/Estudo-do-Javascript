@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>método Reverse e Sort</title>
+</head>
+<body>
+    <h1>Método Reverse e Sort</h1>
+
+    <p id="msg"></p>
+    <p id="ordenar"></p>
+
+    <button onclick="ordenarReverse()">Reverse</button>
+    <button onclick="ordenarSort()" >Sort</button>
+
+    <script>
+       
+            var frutas = ['Laranja', 'Abacaxi', 'Pessego', 'Melão']
+
+            document.getElementById('msg').innerHTML = frutas
+            document.write('</br>')
+
+
+            function ordenarReverse(){
+                frutas.reverse()
+                document.getElementById('ordenar').innerHTML = frutas
+            }
+
+            function ordenarSort(){
+                frutas.sort()
+                document.getElementById('ordenar').innerHTML = frutas
+            }
+
+            var numeros = [3,1,4,0,5,2]
+
+            document.write(numeros.sort())
+
+     
+    </script>
+</body>
+</html>

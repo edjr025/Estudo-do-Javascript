@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date</title>
+</head>
+<body>
+    <h1>Treinamento JS</h1>
+
+    <script>
+       const data1 = new Date()
+       console.log(data1)
+
+       const data2 = new Date('March 19 2022 09:30')
+       console.log(data2)
+
+       const data3 = new Date(2022, 02, 19, 9,55)
+       console.log(data3)
+
+       console.log(data3.getDay())
+       console.log(data3.toISOString())
+    </script>
+</body>
+</html>

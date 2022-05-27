@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casting de valores </title>
+</head>
+<body>
+    <h1>Casting de valores com as funções globais Number e String</h1>
+
+   <p id="msg"></p>
+   <p id="msg2"></p>
+   <p id="msg3"></p>
+   <p id="msg4"></p>
+   <p id="msg5"></p>
+
+    <script>
+
+     var nome = 'junior'
+     var numero = 100
+
+     var texto = '250'
+     var texto2 = '1540'
+     
+     //usando o number
+     document.getElementById('msg').innerHTML = Number(nome)
+     document.getElementById('msg2').innerHTML = Number(numero)
+     //passando uma string para numero
+     document.getElementById('msg3').innerHTML = Number(texto) + 100
+
+     //usando String
+     document.getElementById('msg4').innerHTML = String(texto + texto2)
+     document.getElementById('msg5').innerHTML = String(texto + texto2) + 65874
+
+
+    </script>
+</body>
+</html>

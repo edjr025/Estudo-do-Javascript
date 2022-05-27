@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>indexOf, lastIndexOf e replace</title>
+</head>
+<body>
+    <h1>  Strings indexOf, lastIndexOf e replace</h1>
+
+    <p id="msg"></p>
+    <p id="msg2"></p>
+    <p id="msg3"></p>
+    <p id="msg4"></p>
+    <p id="msg5"></p>
+
+    <script>
+       var frase = 'Agora estou aprendendo Javascript'
+
+       //pega o indice de onde a letra se encontra
+       var indiceLetra = frase.indexOf('J')
+
+       //pega o indice de onde a palavra começa
+       var inicioDaPalavra = frase.indexOf('aprendendo')
+
+       //pega o ultimo indice em que a letra aparece
+       var ultimaIndiceDaletra = frase.lastIndexOf('o')
+
+        //troca uma string por outra
+       var mudandoTexto = frase.replace('Javascript','Angular')
+
+       document.getElementById('msg').innerHTML = indiceLetra
+       document.getElementById('msg').innerHTML = inicioDaPalavra
+       document.getElementById('msg3').innerHTML = ultimaIndiceDaletra
+       document.getElementById('msg4').innerHTML = mudandoTexto
+    </script>
+</body>
+</html>

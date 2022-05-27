@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clonando objetos</title>
+</head>
+<body>
+    <h1>Treinamento JS</h1>
+
+    <script>
+       //clonando objetos usando o metodo assign
+
+       const celular = {
+           marca: 'Asus',
+           tamanhoTela: {
+               vertical: 500,
+               horizontal: 600
+           },
+           ligar: function(){console.log('ligando.....')}
+       }
+
+       //fazendo a clonagem
+       const clone = Object.assign({
+           //você pode acrescentar propriedades no novo objeto(clone)
+           bateria: 5000
+       }, celular)
+       console.log(clone)
+
+       //2ª forma de clonar >> usando o operador spread
+       const novoObj = {...celular}
+       console.log(novoObj)
+    </script>
+</body>
+</html>

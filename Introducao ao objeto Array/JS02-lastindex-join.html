@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lastIndexOf, Join e  Separator</title>
+</head>
+<body>
+    <h1>Mais sobre indexOf e lastIndexOf Método Join e uso do parâmetro Separator</h1>
+
+    <p id="msg"></p>
+    <p id="tam"></p>
+
+    <script>
+       
+        //para usar o lastindexof temos q duplicar um valor no array
+       var frutas = ['Acerola', 'banana', 'Cajá', 'melancia', 'Pera', 'banana']
+
+       var n = frutas.lastIndexOf('banana')
+
+       document.getElementById('tam').innerHTML = 'a ultima incidencia dessa fruta no array é na posiçaõ' + n
+
+       //dentro do join colocamos o nosso separador
+       var juncao = frutas.join('-')
+
+       document.getElementById('msg').innerHTML = juncao
+
+      
+
+
+
+      
+    </script>
+</body>
+</html>

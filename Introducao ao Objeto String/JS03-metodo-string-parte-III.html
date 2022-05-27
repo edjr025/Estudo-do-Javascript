@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodo de String Parte III</title>
+</head>
+<body>
+    <h1>Strings Search, Slice, Split, Substring, toLowerCase e toUpperCase</h1>
+
+    <p id="msg"></p>
+    <p id="msg2"></p>
+    <p id="msg3"></p>
+    <p id="msg4"></p>
+    <p id="msg5"></p>
+    <p id="msg6"></p>
+    <p id="msg7"></p>
+
+    <script>
+       var frase = 'Agora estou aprendendo Javascript. depois vou para Angular'
+       
+       //não funcionou
+       var pesquisa = frase.search('estou') 
+
+       var partir = frase.slice(11,33) //tem q colocar um nº posterior do ultimo indice
+       
+       //pega uma palavra dentro da string  atraves do indice que inicia a palavra 
+       var corte = frase.split(' ')
+
+       //cortando a string atraves do . ai antes do ponto é o indice 0, depois 1 .....
+       var corte2 = frase.split('. ')
+
+        //pegando um pedaço da string
+       var subFrase = frase.substr(6,16)
+
+       //colocando a string pra tudo maiusculo 
+       var maiusculas = frase.toLocaleUpperCase()
+
+       //colocando a string pra tudo minusculo 
+       var minusculas = frase.toLowerCase()
+
+       document.getElementById('msg').innerHTML = pesquisa
+       document.getElementById('msg').innerHTML = partir
+       document.getElementById('msg3').innerHTML = corte[3]
+       document.getElementById('msg4').innerHTML = corte2[1]
+       document.getElementById('msg5').innerHTML = subFrase
+       document.getElementById('msg6').innerHTML = maiusculas
+       document.getElementById('msg7').innerHTML = minusculas
+    </script>
+</body>
+</html>

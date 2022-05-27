@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interagindo com o DOM</title>
+</head>
+<body>
+    <h1 id="txt">titulo</h1>
+
+    <script>
+        /*
+            <html> --- correponde a documnet.documentElement
+            <head> --- corresponde a document.head
+            <body> --- coresponde a document.body    
+        */
+
+        console.log(document.body.childNodes)
+        document.body.childNodes[1].innerText = 'novo texto do titulo' //dessa forma é complexa, não é usada
+
+        console.log(document.documentElement.lang)
+    </script>
+</body>
+</html>

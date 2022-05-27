@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>isFinite, Escape e Unscape </title>
+</head>
+<body>
+    <h1>Funções globais isFinite, Escape e Unscape</h1>
+
+   <p id="msg"></p>
+   <p id="msg2"></p>
+   <p id="msg3"></p>
+   <p id="msg4"></p>
+   <p id="msg5"></p>
+
+    <script>
+        var valor = 1000
+        var nome = 'junior'
+        var texto = 'Edvaldo Arcanjo dos Santos Junior'
+
+        //usando o isFinite
+        document.getElementById('msg').innerHTML = isFinite(valor)
+        document.getElementById('msg2').innerHTML = isFinite(nome)
+
+        //usando o Escape
+        var nome_codificado = escape(texto)
+        document.getElementById('msg3').innerHTML = nome_codificado
+
+        //usando o Unscape
+        var descodificado = unescape(nome_codificado)
+        document.getElementById('msg4').innerHTML = descodificado
+
+    </script>
+</body>
+</html>

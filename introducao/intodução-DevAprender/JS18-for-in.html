@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For IN</title>
+</head>
+<body>
+    <h1>Treinamento JS</h1>
+
+    <script>
+
+        /*
+            OBS >> Loop feito para interar sobre propriedadde de objetos ou
+            elementos de array
+        */
+        
+        const pessoa = {
+            nome: 'Junior',
+            idade: 28
+        }
+
+        const cores = ['branco', 'verde', 'azul']
+
+        //key-value >> a minha variavel chave vai ser a key no exemplo
+        for(let chave in pessoa){
+            console.log(chave)
+        }
+
+        console.log('pegando  a key(chave) e o value (valor) 1ª forma')
+        //pegando  a key(chave) e o value (valor) 1ª forma
+        for(let chave in pessoa){
+            console.log(chave, pessoa.nome)
+        }
+
+        console.log('pegando  a key(chave) e o value (valor) 2ª forma')
+        //pegando  a key(chave) e o value (valor) 2ª forma
+        for(let chave in pessoa){
+            console.log(chave, pessoa['nome'])
+        }
+
+        //vendo apenas os indices do array
+        for(let indice in cores){
+            console.log(indice)
+        }
+        //vendo  os indices e os valores do array
+        for(let indice in cores){
+            console.log(indice, cores[indice])
+        }
+        
+
+    </script>
+</body>
+</html>

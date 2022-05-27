@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>abertura de janela</title>
+</head>
+<body>
+    <h1>abertura de janela</h1>
+
+    <p id="msg"></p>
+    <p id="msg2"></p>
+    <p id="msg3"></p>
+    <p id="msg4"></p>
+    <p id="msg5"></p>
+    <p id="msg6"></p>
+    <p id="msg7"></p>
+
+    
+    <button onclick="abrirJanela()">Abrir Janela</button>
+    <button onclick="verificar()">Verificar</button>
+
+    <script>
+
+        var novaJanela
+
+        function abrirJanela(){
+            window.open('http://www.google.com')
+        }
+
+        function verificar(){
+            novaJanela = window.open('http://ge.globo.com', '_blank', 'width=400, height=300', 'left=300', 'top=100')
+        }
+    </script>
+</body>
+</html>

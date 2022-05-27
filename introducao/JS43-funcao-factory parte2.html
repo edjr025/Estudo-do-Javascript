@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>factory function</title>
+</head>
+<body>
+    
+    <script>
+        //minha forma de fazer
+        function criarProduto(nome, preco){
+            this.nome = nome
+            this.preco = preco
+        }
+
+        produto1 = new criarProduto('geladeira', 2500)
+        console.log(produto1) 
+
+
+        //forma do Leonardo Leitão
+        function criarProdutos(nome, preco){
+            return{
+                nome,
+                preco,
+                desconto: 0.1
+            }  
+        }
+
+        console.log(criarProdutos('NoteBook', 3500))
+        console.log(criarProdutos('iPad',4000))
+    </script>
+</body>
+</html>

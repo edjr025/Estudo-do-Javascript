@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções</title>
+</head>
+<body>
+    <h1>Funções</h1>
+
+    <p id="texto"></p>
+
+    <button onclick="mostrar()">Execute uma Função</button>
+    <button onclick="adcionar(10,30)">Execute uma Soma entre 10 e 30</button>
+
+    <button
+     onclick="document.getElementById('texto').innerHTML = subtrair(10,6)">
+     Subtraindo Valores
+    </button>
+
+    <button onclick="chamar()">Chamar</button>
+
+    <script>
+        
+        //função sem retorno e sem parametros
+        function mostrar(){
+            var texto = document.getElementById('texto')
+            texto.innerHTML = 'executando a função MOSTRAR quando clicou no botão '
+        }
+
+        //função com parametros/argumentos
+        function adcionar(a,b){
+            var texto = document.getElementById('texto')
+            var resultado = a + b
+            texto.innerHTML = resultado
+        }
+
+        //função que retorne valores
+        function subtrair(a,b){
+            return a - b
+        }
+        
+        //função chamando outra função
+        function multiplicar(x,y){
+            return x * y
+        }
+
+        function chamar(){
+            
+            var resultado = multiplicar(5,3)
+            var p = document.getElementById('texto')
+            p.innerHTML = resultado
+        }
+
+
+    </script>
+</body>
+</html>

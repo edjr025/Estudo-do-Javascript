@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Var let e const</title>
+</head>
+<body>
+    <h1>Formas de declarar variaveis -- Var let e const</h1>
+
+    <button onclick="testarVar()">Var</button>
+    <button onclick="testarLet()">Let</button>
+    <button onclick="testarConst()">Const</button>
+    <button onclick="testarConstObjeto()">Const em objetos</button>
+    
+
+    <script>
+       /*
+            var ->  escopo de função
+            let ->  escopo de bloco
+            const -> não pode ser alterada
+       */
+
+       //o var não guardo o escopo, ele vaza ao escopo, por isso q sempre o ultimo valor é apresentado
+       //como valor de uma variavel declarada com o Var 
+       function testarVar(){
+           var valor = 10
+           if(true){
+               var valor = 20
+           }
+
+           document.write(valor)
+       }
+
+       //o let te dar mais controle referente ao escopo onde ta a variavel
+       //logo, se dentro do if tirar-mos o let e deixa apenas valor=30 ele mostrará o 30 na tela
+       function testarLet(){
+           let valor = 10
+           if(true){
+               let valor = 30
+           }
+           document.write(valor)
+       }
+
+       //essa função não executa pois houve a tentativa de alterar a constante valor 
+       function testarConst(){
+           try {
+            const valor = 10
+            valor = 20
+            document.write(valor)
+           } catch (error) {
+            document.write('uma constante não pode ter seu valor')
+           }
+          
+       }
+
+       //as const em objetos não é constantes
+       function testarConstObjeto(){
+           const aluno = {
+               nome: 'Pedro',
+               nota: 10
+           }
+
+           //se chegarmos aqui e troca o nome do aluno ou a nota ele permite
+           aluno.nome = 'Maria'
+           aluno.nota = 7.5
+
+           document.write('o nome do aluno é: ' + aluno.nome + ' e a sua nota foi: ' + aluno.nota)
+       }
+
+    </script>
+</body>
+</html>

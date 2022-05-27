@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map</title>
+</head>
+<body>
+    <script>
+        const tecnologias = new Map()
+
+        tecnologias.set('react', {framework: false})
+        tecnologias.set('Angular', {framework: true})
+
+        console.log(tecnologias.react)
+        console.log(tecnologias.get('react'))
+
+        const chavesVariadas = new Map([
+            [function() {}, 'Função'],
+            [{}, 'Objeto'],
+            [123, 'Number'],
+        ])
+
+        chavesVariadas.forEach((vl, ch) => {
+            console.log(ch, vl)
+        })
+
+        console.log(chavesVariadas.has(123))
+        chavesVariadas.delete(123)
+        console.log(chavesVariadas.has(123))
+        console.log(chavesVariadas.size)
+
+        chavesVariadas.set(321, 'a')
+        chavesVariadas.set(321, 'b')
+        console.log(chavesVariadas)
+
+    </script>
+</body>
+</html>

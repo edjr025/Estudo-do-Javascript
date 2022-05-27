@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criando meu MAP</title>
+</head>
+<body>
+    <script>
+
+        //criando um map
+        Array.prototype.map2 = function (callback){
+            const newArray = []
+            for(let i = 0; i < this.length; i++){
+                newArray.push(callback(this[i], i, this))
+            }
+
+            return newArray
+        }
+
+        const carrinho = [
+            '{ "nome": "Borracha", "preco": 3.45}',
+            '{ "nome": "Caderno", "preco": 13.90}',
+            '{ "nome": "Kit de Lapis", "preco": 41.22}',
+            '{ "nome": "Caneta", "preco": 7.50}',
+        ]
+
+        //retornar um array apenas com os preços
+        const paraObjeto = json => JSON.parse(json)
+        const apenaspreco = produto => produto.preco
+
+        const resultado = carrinho.map2(paraObjeto).map2(apenaspreco)
+        console.log(resultado)
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes</title>
+</head>
+<body>
+    <h1>Classes</h1>
+
+    <script>
+        //uma classe
+        class Pessoa{
+            
+            //propriedade da classe pessoa
+             estadoCivil = ''
+
+            //construtor da classe
+            constructor(n, i){
+                this.nome = n
+                this.idade = i
+            }
+
+            //metodo da classe
+            falar(){
+                return 'a pessoa falou'
+            }
+        }
+
+        //instanciando um objeto do tipo pessoa
+        let eu = new Pessoa()
+
+        let voce = new Pessoa('junior',27)
+        document.write(voce.nome + ' tem ' + voce.idade + '</br>')
+        document.write(eu.falar())
+    </script>
+</body>
+</html>

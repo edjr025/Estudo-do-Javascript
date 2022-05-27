@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class vs Factory function</title>
+</head>
+<body>
+    
+    <script>
+        class Pessoa{
+            constructor(nome){
+                this.nome = nome
+            }
+
+            falar(){
+                console.log(`meu nome é ${this.nome}`)
+            }
+        }
+
+        const p1 = new Pessoa('João')
+        p1.falar()
+
+        //segunda forma
+        const criarPessoa = nome =>{
+            return{
+                falar: () => console.log(`meu nome é ${nome}`)
+            }
+        }
+
+        const p2 = criarPessoa('Maria')
+        p2.falar()
+
+
+        //outra forma  ou 3ª forma
+        function Pessoa2(nome){
+            this.nome = nome
+
+            this.falar = function(){
+                console.log(`Meu nome é ${this.nome}`)
+            }
+        }
+
+        const p3 = new Pessoa2('Pedro')
+        p3.falar()
+    </script>
+</body>
+</html>

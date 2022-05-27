@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This e a função Bind</title>
+</head>
+<body>
+    
+
+    <script>
+      function Pessoa(){
+          this.idade = 0
+          const self = this   //self é usado para driblar  a variação do This
+          setInterval(function(){
+              self.idade++
+              console.log(self.idade)
+          }/*.bind(this)*/, 2000)
+      }
+
+      new Pessoa
+    </script>
+</body>
+</html>

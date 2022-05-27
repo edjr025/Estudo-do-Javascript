@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imperativo vc Declarativo</title>
+</head>
+<body>
+    <script>
+        const alunos = [
+            {nome: 'João', nota: 7.9},
+            {nome: 'Maria', nota: 9.2}
+        ]
+
+        //imperativo
+        let total1 = 0
+        for(let i = 0; i < alunos.length; i++){
+            total1 += alunos[i].nota
+        }
+
+        console.log(total1 / alunos.length)
+
+        //declarativo
+        const getNota = aluno => aluno.nota
+        const soma = (total, atual) => total + atual
+
+        const total2 = alunos.map(getNota).reduce(soma)
+        console.log(total2 / alunos.length)
+    </script>
+</body>
+</html>

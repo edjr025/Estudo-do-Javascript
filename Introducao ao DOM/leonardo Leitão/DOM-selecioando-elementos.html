@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecionando elementos</title>
+
+    <style>
+        body{
+            background-color: cadetblue;
+        }
+        .destaque{
+            border: 2px solid red;
+            color: white;
+            padding: 50px;
+            margin: 20px;
+           
+        }
+
+        div{
+            border: 1px solid white;
+            padding: 20px;
+            width: 100px;
+            background-color: red;
+        }
+
+        #primeiro{
+            background-color: darkgoldenrod;
+        }
+
+        .terceiro{
+            background-color: aqua;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="primeiro">#primeiro</div>
+    <div>segundo</div>
+    <div class="terceiro ultimo">.terceiro .ultimo</div>
+
+    <script>
+        document.getElementById('primeiro').classList.add('destaque')
+
+        const divs = document.getElementsByTagName('div')
+        Array.from(divs).forEach(e => e.classList.remove('destaque'))
+
+        const divsArray = [...divs]
+        divsArray.forEach(e => e.classList.add('destaque'))
+
+        const ultimosElementos = document.getElementsByClassName('ultimo')
+        for(let e of ultimosElementos){
+            e.classList.remove('destaque')
+        }
+    </script>
+</body>
+</html>

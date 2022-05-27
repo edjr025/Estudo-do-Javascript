@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Função Reduce</title>
+</head>
+<body>
+    <h1>Metodos Avançados de Array(Reduce)</h1>
+
+    <p id="msg"></p>
+    <p id="msg1"></p>
+    <p id="msg2"></p>
+    <p id="msg3"></p>
+    <p id="msg4"></p>
+    <p id="msg5"></p>
+    <p id="msg6"></p>
+    <p id="msg7"></p>
+
+
+    <script>
+        //criando um array de objetos para execplificar o metodo reduce
+       const foguetes = [
+           {pais: 'Russia', lancamentos: 32},
+           {pais: 'US', lancamentos: 23},
+           {pais: 'China', lancamentos: 16},
+           {pais: 'Europa', lancamentos: 7},
+           {pais: 'India', lancamentos: 4},
+           {pais: 'Japão', lancamentos: 3},
+       ]
+
+       const totalDeLancamento = foguetes.reduce((anterior, atual) => anterior + atual.lancamentos, 0)
+       document.getElementById('msg').innerHTML = totalDeLancamento
+
+       //somando os valores de um array com o reduce
+       const array = [2, 4, 6, 8]
+
+       const soma = array.reduce((anterior, atual) => anterior + atual, 0)
+       console.log(soma)
+
+       //calculando a media com o reduce
+       const numeros = [1,2,3,4,5,6,7,8,9,10]
+
+       function media(acc, num){
+           console.table(acc)
+           const novoTotal = acc.total + num
+           const novaQtde = acc.qtde + 1
+           return{
+               total: novoTotal,
+               qtde: novaQtde,
+               media: novoTotal / novaQtde
+           }
+       }
+
+       const valorInicial = {total: 0, qtde: 0, media: 0}
+       const valorFinal = numeros.reduce(media, valorInicial)
+       console.log(valorFinal)
+       console.log(valorFinal.media)
+       console.log(valorFinal.total)
+
+    </script>
+</body>
+</html>

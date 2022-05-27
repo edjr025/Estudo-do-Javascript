@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formas diferentes de percorrer arrays</title>
+</head>
+<body>
+    <script>
+        let names = ['Alice', 'Bruno', 'Camila', 'Daniel', 'Eliana']
+
+        //percorrer com o for comum
+        for(let i = 0; i<names.length; i++){
+            console.log(names[i])
+        }
+
+        //percorrer com o forEach
+        names.forEach(n => console.log('com forEach', n))
+
+        //execicio pratico
+
+        let videos = [
+            {id: 112, titulo: 'a volta dos que não foram', ano: 1901, autor: 'Brayan', rating: 5.98},
+            {id: 2, titulo: 'a queda da muralha', ano: 1934, autor: 'taylor', rating: 6.70},
+            {id: 31, titulo: 'receba!!!', ano: 19, autor: 'Iran', rating: 7.51},
+            {id: 4, titulo: 'O cara da Luva de pedreiro', ano: 1981, autor: 'Luva De pedreiro', rating: 9.43},
+            {id: 55, titulo: 'Obrigado meu Deus', ano: 1999, autor: 'João', rating: 8.45},
+            {id: 36548, titulo: 'Eu sou Magnifico', ano: 1991, autor: 'Junior', rating: 8.0},
+            {id: 6547, titulo: 'Estrutura de Dados', ano: 2001, autor: 'Loiane', rating: 7.5},
+            {id: 25, titulo: 'Algoritmos', ano: 2005, autor: 'Guanabara', rating: 6.0},
+            {id: 64, titulo: 'Angula 2+', ano: 2009, autor: 'Alura', rating: 4.91},
+            {id: 987454, titulo: 'React Native', ano: 2011, autor: 'Devmidia', rating: 3.2},
+        ]
+
+        let videoIdComOsAutores = []
+
+        videos.forEach(video => {
+            videoIdComOsAutores.push({id: video.id, autor: video.autor})
+        })
+
+        console.log(videoIdComOsAutores)
+
+        //usando o map pra fazer a mesma coisa
+
+        let novoArray = videos.map((video) => ({id: video.id, Autor: video.autor}))
+        console.log('com MAP', novoArray)
+        
+
+    </script>
+</body>
+</html>

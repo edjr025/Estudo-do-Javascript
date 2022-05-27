@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Call e Apply</title>
+</head>
+<body>
+
+    <script>
+        function getpreco(imposto = 0, moeda ='R$'){
+            return `${moeda} ${this.preco * (1 - this.desc) * (1 + imposto)}`
+        }
+
+        const produto = {
+            nome: 'Notebook',
+            preco: 4589,
+            desc: 0.15,
+            getpreco
+        }
+
+        console.log(getpreco())
+        console.log(produto.getpreco())
+
+        const carro = {preco: 49990, desc: 0.20}
+        console.log(getpreco.call(carro))
+
+        console.log(getpreco.apply(carro))
+
+        console.log(getpreco.call(carro,0.17, '$'))
+        console.log(getpreco.apply(carro,[0.17, '$'])) // a direrença é q no apply os parametros fica dentro de um array
+    </script>
+</body>
+</html>

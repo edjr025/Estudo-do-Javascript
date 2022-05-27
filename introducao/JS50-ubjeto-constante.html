@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pq usamos const e podemos mexer no objeto?</title>
+</head>
+<body>
+    
+    <script>
+        // pessoa -> 123 -> {....}  pessoa aponta parao endereço de meoria 123 que guarda o objeto
+        const pessoa = {nome: 'João'}
+        pessoa.nome = 'Pedro'
+        console.log(pessoa)
+
+        //pessoa -> 456 -> {...} isso aqui não pode, vc esta tentando fazer com que pessoa aponte pra outro endereço de memoria
+       // pessoa = {nome: 'Ana'} >> isso não pode, é o q estou falando na linha de cima
+
+       Object.freeze(pessoa) //congelar o objeto, agora vc não pode mudar os atributoss e os valores
+       pessoa.nome = 'Maria'
+       console.log(pessoa.nome)
+
+       /*
+        OBS: com o freeze vc não consegue mudar os atributos, não consegue adcionar atributos, não deixa excluir atributos
+       */
+
+
+       const pessoaConstante = Object.freeze({nome: 'João'})
+       pessoaConstante.nome = 'Maria'
+       console.log(pessoaConstante)
+    </script>
+</body>
+</html>

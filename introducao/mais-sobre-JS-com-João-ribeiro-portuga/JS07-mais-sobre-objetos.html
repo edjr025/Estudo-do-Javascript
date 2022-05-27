@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos</title>
+</head>
+<body>
+    
+    <script>
+        let cliente = new Object() // usado o contructor do objeto
+        let cliente2 = {} //usando o objeto literal
+
+        //função construtora
+        function Pessoa(nm, ap, tlf){
+            this.nome = nm
+            this.apelido = ap
+            this.telefone = tlf
+
+            this.nome_completo = function(){
+                return this.nome + ' ' + this.apelido
+            }
+
+            this.alterarNome = function(novo_nome){
+                this.nome = novo_nome
+            }
+        }
+
+        let cliente1 = new Pessoa('Junior','Zakumy','34993121787')
+        console.log(cliente1.nome)
+        console.log(cliente1.nome_completo())
+        cliente1.alterarNome('edvaldo')
+        console.log(cliente1.nome)
+        console.log(cliente1.nome_completo())
+
+
+        //objeto do tipo literal
+
+        let nacionalidade = 'Brasil'
+        const aluno = {
+            nome: 'Edvaldo',
+            sobrenome: 'Arcanjo',
+            telefone: 651341789,
+            "tipo cliente": 'VIP',  //para decarar propriedade com espaços é necessario colocar entre aspas
+            [nacionalidade]: 'br'
+        }
+        console.clear()
+
+       console.log(aluno['tipo cliente']) //é assim q printamos uma propriedade com aspas
+       console.log(aluno.Brasil)
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input id="input" type="text">
+    </form>
+
+    <button id="btn1">Botão 1</button>
+    <button id="btn2">Botão 2</button>
+    <button id="enviar">Enviar</button>
+    <button id="enviar2">Enviar 2</button>
+
+    <script>
+        let btn1 = document.querySelector('#btn1')
+        let btn2 = document.querySelector('#btn2')
+        let enviar = document.querySelector('#enviar')
+        let input = document.querySelector('#input')
+        let enviar2 = document.querySelector('#enviar2')
+
+        // dessa forma é a correta, colocar eventos no HTML não é muito bom, suja o codigo
+        btn1.addEventListener('mouseover', function(){
+            console.log('foco no botão 1')
+        })
+
+        input.addEventListener('blur', function(){
+            console.log('foco no input')
+        })
+
+        //usando o arrow function para o evento click
+        enviar.addEventListener('click', () =>{
+            console.log('enviou o formulario')
+        })
+
+        enviar2.addEventListener('click', function(event){
+            //evitar o envio do formulario e o recarregamento da pagina com o preventDefault
+            event.preventDefault()
+            console.log('clicou no enviar 2 e a pagina não será recarregada')
+        })
+    </script>
+</body>
+</html>

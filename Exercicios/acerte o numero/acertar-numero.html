@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numero Aleatorio</title>
+</head>
+<body>
+    <h1>Acerte o Numero</h1>
+
+
+    <script>
+        //gerando um numero aleatorio entre 1 e 10
+        var numero = Math.floor(Math.random() * 10 + 1)
+
+        var escolha = parseInt(prompt('informe um numero de 1 a 10')) 
+        if(escolha >10 || escolha <1){
+            prompt('Numero invalido -- escolha um numero entre 1 e 10')
+        }
+
+        document.write('o numero gerado foi: ' + numero + '</br>')
+        document.write('o numero que você escolheu foi: ' + escolha + '</br>')
+        
+        if(escolha > numero){
+            alert('chutou um numero acima')
+        }else if(escolha < numero){
+            alert('chutou um numero abaixo')
+        }else{
+            alert('aeeee você acertou!!!')
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>isNaN </title>
+</head>
+<body>
+    <h1>Utilização de isNaN para verificar se uma variável é numérica</h1>
+
+   <p id="msg"></p>
+   <p id="msg2"></p>
+   <p id="msg3"></p>
+
+    <script>
+        var valor = 'teste'
+
+        //var variavel = '100'
+
+        if(isNaN(valor)){
+            document.getElementById('msg').innerHTML = 'Não é um numero'
+        }else{
+            document.getElementById('msg').innerHTML = 'é um numero'
+        }
+
+        //não funciona
+        // if(variavel == Number.NaN){
+        //     document.getElementById('msg2').innerHTML = 'Não é um numero'
+        // }else{
+        //     document.getElementById('msg2').innerHTML = 'é um numero'
+        // }
+    </script>
+</body>
+</html>

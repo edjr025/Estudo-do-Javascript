@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hoisting</title>
+</head>
+<body>
+    <h1>Hoisting</h1>
+
+    <script>
+        /*Hoisting*/
+
+        //no hoisting as variaveis e as funções serã inçadas para a o topo, ele joga no topo da função
+
+        //obs as variaveis são issadas porem o seu ponto de denifição continua no mesmo lugar
+        
+        function hoisting(){
+            let a = 2
+            let b = 3
+            inside()
+
+            // return a * b  >> apos esse retorno ele nao executara o codigo abaixo
+
+            function inside(){
+                alert('isso é um exemplo')
+            }
+
+           // inside()  >>> vou levar essa função lá pra cima e vai funciona devido o hoisting
+
+            return a * b
+        }
+
+        hoisting()
+        console.log(hoisting())
+
+    
+
+    </script>
+</body>
+</html>

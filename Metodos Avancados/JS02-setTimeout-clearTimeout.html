@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SetTimeout e ClearTimeout </title>
+</head>
+<body>
+    <h1>SetTimeout e ClearTimeout Execução de funções após x tempo</h1>
+
+    <p id="msg"></p>
+    <p id="msg2"></p>
+    <button onclick="executar()">Executar</button>
+    <button onclick="pararEvento()">Interroper</button>
+
+    
+
+    <script>
+
+        var temporizador
+        var num = 0
+
+        function executar(){
+
+            temporizador = setTimeout(function chamar(){
+                 alertar()
+            },3000)
+        }
+
+        function alertar(){
+
+            document.getElementById('msg').innerHTML = 'função executada'
+            alert('esse alert apareceu após 3 segundos')
+            // document.getElementById('msg').innerHTML = new Date().toLocaleTimeString()
+        }
+
+
+
+        function pararEvento(){
+            clearTimeout(temporizador)
+            document.getElementById('msg').innerHTML = 'função interrompida'
+        }
+
+
+
+      
+    </script>
+</body>
+</html>

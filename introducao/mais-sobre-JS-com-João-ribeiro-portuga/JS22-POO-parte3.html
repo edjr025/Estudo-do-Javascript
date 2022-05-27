@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POO parte 3</title>
+</head>
+<body>
+    <script>
+
+        //propriedade privadas
+
+        class Pessoa{
+            //privada vc põe o # antes do nome da propriedade
+            #nome
+            idade
+
+            constructor(n, i){
+                this.#nome = n
+                this.idade = i
+            }
+
+            apresentar_nome(){
+                return this.#nome
+            }
+
+            //um metodo privado ele não sera acessado de fora, só dentro da classe
+            #apresentar_interno(){
+                console.log('nome: ' + this.#nome)
+            }
+
+            apresentar(){
+                this.#apresentar_interno()
+            }
+
+            //para mudar o valor de um propriedade privada
+            setNome(nome){
+                this.#nome = nome.toUpperCase()
+            }
+
+            getNome(){
+                return this.#nome
+            }
+        }
+
+        let eu = new Pessoa('Edvaldo', 28);
+        console.log(eu.apresentar_nome())
+        console.log(eu.idade)
+
+        /*
+            se eu tentar mudar o nome >>> eu.nome = 'Pedro' ele não deixa pois a propriedade
+            nome é privada ja a propriedade idade ele deixa mudar observe:
+
+            agora se quero ter acesso a propriedade privada irei usar os metodos get e set la 
+            dentro da minha classe vou declara-los >>> vai la
+         */
+
+         eu.idade = 50
+         console.log(eu.idade)
+            // depois de declarar os metodos get e set la dentro da classe, agora eu consigo mudar a propriedade privada
+         eu.setNome('Joaquim')
+         console.log(eu.getNome())
+
+         eu.apresentar()
+    </script>
+</body>
+</html>

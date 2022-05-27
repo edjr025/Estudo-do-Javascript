@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>herança</title>
+</head>
+<body>
+    <script>
+        const pai  = {nome: 'Pedro', corCabelo: 'Preto'}
+
+        const filha1 = Object.create(pai)
+        filha1.nome = 'Ana'
+        console.log(filha1.corCabelo)
+
+        const filh2 = Object.create(pai, {
+            nome: {value: 'Bia', writable: false, enumerable: true}
+        })
+
+        console.log(filh2.nome)
+        filh2.nome = 'Carla'
+        console.log(`${filh2.nome} tem cabelo ${filh2.corCabelo}`)
+
+        console.log(Object.keys(filha1))
+        console.log(Object.keys(filh2))
+
+        for(let key in filh2){
+            filh2.hasOwnProperty(key)?  //hasOwnProperty é para definir se a propriedade é do objeto ou não
+            console.log(key) : console.log(`por herança:  ${key}`)
+        }
+
+    </script>
+</body>
+</html>

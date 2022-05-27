@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dimensão e localização de elementos</title>
+    <style>
+        div{
+            width: 300px;
+            height: 200px;
+            padding: 20px;
+            margin: 50px auto;
+            background-color: lightblue;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi ea omnis enim ipsum autem ad eveniet quisquam amet, repellat corporis voluptates fugit doloribus cum iure dolorum quaerat assumenda quis numquam!
+        Vitae assumenda necessitatibus quam obcaecati porro deleniti facere iusto eius ut soluta ducimus corrupti, officiis fugit! Numquam, perspiciatis sunt tempore ad, impedit hic tempora eveniet asperiores a exercitationem, officia enim.
+        Doloribus et repudiandae dignissimos unde quo sunt reprehenderit maxime quae error. Quos repellendus labore magnam ea excepturi saepe minus laboriosam soluta provident illum repellat quidem sapiente, reiciendis veritatis unde libero?
+        Dolor ipsum rem animi, quod doloremque debitis error, aut tempora omnis velit esse. Fugiat architecto, alias, ea molestias a nostrum dolores provident repudiandae impedit nesciunt deserunt odio omnis, error ipsa!
+        Error maiores dignissimos quia voluptatibus. Saepe nesciunt quisquam odit fuga deserunt quas reprehenderit, exercitationem voluptatum eveniet, pariatur eos rerum nobis adipisci architecto, commodi natus hic cum quia? Nobis, unde laborum!
+        Aperiam est unde assumenda? Adipisci cumque nam ullam placeat excepturi a fuga accusamus ipsum, sed similique voluptas amet, quibusdam veniam? Omnis saepe tempora unde soluta porro maxime in eaque asperiores.
+        Quibusdam, commodi a corporis provident ipsam autem architecto temporibus iure aperiam labore eius voluptatum ducimus veniam error accusantium? Rem deleniti soluta magnam numquam magni eum quidem architecto modi possimus qui?
+        Quo itaque nemo vero modi quisquam veniam assumenda tempore velit reprehenderit cumque enim recusandae architecto sed, inventore provident eius quaerat repellendus voluptas debitis necessitatibus excepturi quia sunt distinctio. Esse, vel.
+        Ipsa amet quam consequuntur omnis libero corporis impedit porro, sint cum praesentium iste nam incidunt deserunt doloremque. Asperiores soluta, aperiam obcaecati sapiente accusamus earum aliquid, quibusdam doloribus, harum maxime aspernatur?
+        Praesentium, minima harum illum nesciunt sequi, excepturi aperiam a, aut adipisci dicta natus modi cupiditate molestiae consequatur facere quasi maxime. Aut, mollitia culpa ea unde voluptatibus ab. Iusto, veritatis voluptates.
+        Quaerat fugiat, temporibus minima, modi recusandae incidunt aspernatur ipsum odit nam molestiae commodi asperiores consequuntur? Perspiciatis laudantium aut omnis quasi, ex, facilis, impedit rem alias in enim iste repellendus maxime?
+        Molestiae ex voluptatum consequuntur assumenda consectetur cum doloribus ea, optio iure aut excepturi reiciendis commodi reprehenderit magnam perferendis beatae vitae ad placeat, et debitis adipisci necessitatibus quia culpa? Quidem, repellat.
+        Facilis, quasi recusandae maiores nobis sequi odio velit soluta quam placeat repellat ullam assumenda est molestias eaque labore non, qui porro temporibus nihil? Quaerat sapiente fugiat, saepe iusto assumenda molestias.
+        Repellendus praesentium voluptate modi at magni ullam odio ad corrupti! Modi ipsum omnis aspernatur, quis quos molestiae nobis dolores perferendis eligendi quas. Beatae nulla excepturi possimus itaque saepe ducimus minus?
+        Et amet non, quod debitis necessitatibus ut iure dolore quae quos aliquam quo dolorem ullam repellendus eum optio perferendis ipsum provident explicabo neque. Reprehenderit maxime error et quisquam accusamus perferendis.
+    </div>
+
+    <p id="propriedades"></p>
+    <button onclick="buscarPropriedade()">Executar</button>
+    <script>
+
+        function buscarPropriedade(){
+            let div = document.querySelector('div')
+            let p = document.querySelector('#propriedades')
+
+            let resultados = ''
+            //offsetLeft é distancia da parte esquerda ao começo do text
+            resultados += 'offsetLeft = ' + div.offsetLeft + '' 
+            resultados += 'offsetTop = ' + div.offsetTop + '' 
+            resultados += 'offsetWidth = ' + div.offsetWidth + '' 
+            resultados += 'offsetHeight = ' + div.offsetHeight + '' 
+
+
+
+            p.textContent = resultados
+        }
+    </script>
+</body>
+</html>

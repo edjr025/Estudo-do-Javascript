@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>metodo IndexOf</title>
+</head>
+<body>
+    <h1>Encontrar o indice de um elemento de um Array com IndexOf</h1>
+
+    <p id="msg"></p>
+    <p id="tam"></p>
+
+    <script>
+       
+
+       var frutas = ['Acerola', 'Banana', 'Cajá', 'Figo', 'Pera']
+
+       var n = frutas.indexOf('Banana')
+
+       document.write('a fruta informada esta na posição: ' + n + ' do array')
+
+       if(n != -1){
+            document.getElementById('msg').innerHTML = n
+       }else{
+        document.getElementById('msg').innerHTML = 'não tem fruta com esse nome'
+       }
+
+
+
+      
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecionando elementos 3</title>
+
+    <style>
+        body{
+            background-color: cadetblue;
+        }
+        
+
+
+    </style>
+</head>
+<body>
+    <h1>Formulário</h1>
+
+    <form name="pesquisa" action="http://google.com.br/search">
+        <input type="text" name="q" placeholder="digite o termo ....">
+        <select name="hl" id="">
+            <option value="pt-br">Português (Brasil)</option>
+            <option value="en-us">Inglês (Americano)</option>
+        </select>
+        <button>Pesquisar</button>
+    </form>
+    
+    <script>
+        console.log(document.forms)
+        console.log(document.forms[0])
+        console.log(document.getElementsByName('pesquisa'))
+        console.log(document.getElementsByTagName('form'))
+        console.log(document.pesquisa)
+        console.log(document.pesquisa.q)
+        document.pesquisa.q.value = 'Linux'
+        document.pesquisa.hl.value = 'en-us'
+        console.log(document.pesquisa.hl.selectedIndex)
+    </script>
+</body>
+</html>

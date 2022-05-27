@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch</title>
+</head>
+<body>
+    <h1>Usando o metodo Fetch</h1>
+
+    <script>
+
+const options = {
+                method: 'GET',
+                mode: 'cors',
+                cache: 'default'
+            }
+
+
+        //deu erro de cors
+        const requisicao = fetch('https://ranekapi.origamid.dev/wp-json/api/produto',options)
+        .then(resposta =>{
+            return resposta.json();
+        }).then(jsonBody =>{
+            console.log(jsonBody)
+        });
+
+        console.log(requisicao)
+    </script>
+</body>
+</html>

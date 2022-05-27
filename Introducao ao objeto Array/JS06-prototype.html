@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>propriedade Prototype</title>
+</head>
+<body>
+    <h1>Adicionando métodos originais ao Array através da propriedade Prototype</h1>
+
+    <p id="msg"></p>
+    <p id="tam"></p>
+
+    <script>
+      var nomes = ['Pedro', 'Marcos', 'Maria', 'Helena', 'Judite', 'João']
+
+      document.getElementById('tam').innerHTML = 'O Array tem ' + nomes.length + ' Elementos'
+       
+      //colocando os valores do  array para maiusculo
+      for(i = 0; i < nomes.length; i++){
+        nomes[i] = nomes[i].toUpperCase()
+        document.write(nomes[i] + '</br>')
+      }
+
+      document.write('</br>')
+      document.write('</br>')
+
+      
+      //adicionamos um metoso especial ao objeto do tipo array
+      Array.prototype.paraMaiuscula = function(){
+          for(i=0; i < this.length; i++)
+            this[i] = this[i].toUpperCase()
+      }
+
+      //podemos criar qualquer array de string e colocar no for abaixo que os valores ficaram maiusculo
+      var carros = ['BMW', 'Ferrari', 'Poshe', 'Lamborghini', 'Bugati', 'Mercedes']
+
+      carros.paraMaiuscula()
+
+      for(i=0; i < carros.length; i++){
+         document.write(carros[i] + '</br>') 
+      }
+
+
+    </script>
+</body>
+</html>

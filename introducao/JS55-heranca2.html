@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>herança</title>
+</head>
+<body>
+    <script>
+       //Cadeia de prototipos (prototype chain)
+
+       Object.prototype.attr0 = 'Z'  //não faça isso
+       const avo = {attr1: 'A'}
+       const pai = {__proto__: avo, attr2: 'B'}
+       const filho = {__proto__: pai, attr3: 'C'}
+
+      console.log(filho.attr1)  
+      console.log(filho.attr0)
+      console.log(filho.attr50)  
+      console.log(filho.attr2, filho.attr3)
+
+      const carro = {
+          velAtual: 0,
+          velMax: 200,
+          acelerar(delta){
+              if(this.velAtual + delta <= this.velMax){
+                  this.velAtual += delta
+              }else{
+                  this.velAtual = this.velMax
+              }
+          },
+          status(){
+              return `${this.velAtual} Km/h de ${this.velMax}Km/h` 
+          }
+      }
+
+      const ferrari = {
+          modelo: 'F40',
+          velMax: 324 // shadowing
+      }
+
+      const volvo = {
+          modelo: 'Hg47',
+          status(){
+              return `${this.modelo}: ${super.status()}`
+          }
+      }
+
+      Object.setPrototypeOf(ferrari,carro)
+      Object.setPrototypeOf(volvo, carro)
+
+      console.log(ferrari)
+      console.log(volvo)
+
+      volvo.acelerar(100)
+      console.log(volvo.status())
+      ferrari.acelerar(300)
+      console.log(ferrari.status())
+    </script>
+</body>
+</html>

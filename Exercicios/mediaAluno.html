@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media de um aluno</title>
+</head>
+<body>
+    <h1>Media de uma aluno</h1>
+
+    <script>
+        var nota1 = parseFloat(prompt('Informe a 1ª nota'))
+        var nota2 = parseFloat(prompt('Informe a 2ª nota'))
+
+        document.write('nota 1 é: ' + nota1 + '</br>')
+        document.write('nota 2 é: ' + nota2 + '</br>')
+
+        var media = (nota1 + nota2) / 2
+
+        document.write('a media é: ' + media + '</br>')
+
+        if(media >= 7){
+            document.write('Aprovado')
+        }else if(media >= 5 && media < 7){
+            document.write('Recuperação')
+        }else{
+            document.write('Reprovado')
+        }
+
+    </script>
+</body>
+</html>

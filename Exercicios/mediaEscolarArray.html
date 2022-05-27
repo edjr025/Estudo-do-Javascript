@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Escolar a partir de Array</title>
+</head>
+<body>
+    <h1>Treinamento JS</h1>
+
+    <script>
+
+        let array = [50, 60, 70]
+
+        mediaDoAluno = mediaAluno(array)
+        console.log(mediaDoAluno)
+
+        function mediaAluno(notas){
+            let soma = 0
+            let media = 0
+           for(let nota of notas){
+              soma += nota
+           }
+
+           return media = soma / notas.length
+        }
+    </script>
+</body>
+</html>

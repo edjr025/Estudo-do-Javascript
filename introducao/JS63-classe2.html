@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>classe</title>
+</head>
+<body>
+    <script>
+        class Avo {
+            constructor(sobrenome){
+                this.sobrenome = sobrenome
+            }
+        }
+
+        class Pai extends Avo{
+            constructor(sobrenome, profissao = 'Professor'){
+                super(sobrenome) //chamando o contructo da classe avo
+                this.profissao = profissao
+            }
+            
+        }
+
+        class Filho extends Pai{
+            constructor(){
+                super('Silva')
+            }
+        }
+
+        const filho = new Filho
+        console.log(filho)
+    </script>
+</body>
+</html>

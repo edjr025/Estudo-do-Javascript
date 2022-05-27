@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somar multiplos de 3 e 5</title>
+</head>
+<body>
+    <h1>Treinamento JS</h1>
+
+    <script>
+
+        somarMultriplos(10)
+
+        function somarMultriplos(limite){
+            let soma = 0
+            for(let i = 0; i <= limite; i++){
+                if(i % 3 == 0 || i % 5 == 0){
+                    soma+=i
+                }
+            }
+            console.log(soma)
+        }
+    </script>
+</body>
+</html>

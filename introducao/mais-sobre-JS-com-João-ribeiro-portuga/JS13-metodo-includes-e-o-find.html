@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Includes e Find</title>
+</head>
+<body>
+    <script>
+        let alunos = ['Gabriela', 'Marcos', 'Joaquin', 'Ana', 'Clara', 'Marcos', 'Dabilo']
+
+        let pesquisa = 'Ana'
+        if(alunos.includes(pesquisa)){
+            console.log(`${pesquisa} existe no array`)
+        }else{
+            console.log(`${pesquisa} Não existe no array`)
+        }
+
+        const clientes = [
+            {nome: 'joao', idade: 47},
+            {nome: 'ana', idade: 25},
+            {nome: 'carlos', idade: 18},
+            {nome: 'francisca', idade: 52},
+            {nome: 'antonio', idade: 31},
+        ]   
+        
+        let cliente = clientes.find(cli => cli.nome == 'ana') //se tiver um nome q não existe ele coloca undefined
+        console.log(cliente)
+
+        
+    </script>
+</body>
+</html>

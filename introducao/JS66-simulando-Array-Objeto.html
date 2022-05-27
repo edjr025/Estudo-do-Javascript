@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulando array - objeto</title>
+</head>
+<body>
+    <script>
+        const quaseArray = {0: 'Rafael', 1: 'Ana', 2: 'Bia'}
+        console.log(quaseArray)
+        Object.defineProperty(quaseArray, 'toString', {
+            value: function(){return Object.values(this)},
+            enumerable: false
+        })
+
+        console.log(quaseArray[0])
+
+        const meuArray = ['Rafael', 'Ana', 'Bia']
+        console.log(quaseArray.toString(),meuArray)
+    </script>
+</body>
+</html>

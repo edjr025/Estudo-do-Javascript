@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window frames</title>
+</head>
+<body>
+    <h1>Window frames, abertura de janela e verificação do seu estado</h1>
+
+    <p id="msg"></p>
+    <p id="msg2"></p>
+    <p id="msg3"></p>
+    <p id="msg4"></p>
+    <p id="msg5"></p>
+    <p id="msg6"></p>
+    <p id="msg7"></p>
+
+    <iframe src="http://g1.globo.com" frameborder="0"></iframe>
+    <iframe src="https://ge.globo.com/" frameborder="0"></iframe>
+    <iframe src="https://www.uol.com.br/" frameborder="0"></iframe>
+
+    <button onclick="abrirJanela()">Abrir Janela</button>
+    <button onclick="verificar()">Verificar</button>
+
+    <script>
+           var frame = window.frames
+            var novaJanela
+           for(i =0; i< frame.length; i++){
+                frame[i].location  = 'http://w3schools.com'
+           }
+
+           function abrirJanela(){
+              novaJanela = window.open()
+              novaJanela.document.write('nova janela')
+           }
+
+           //metodo para verificar se uma determinada janela esta fechada
+           function verificar(){
+              document.getElementById('msg').innerHTML = novaJanela.closed  
+           }
+    </script>
+</body>
+</html>

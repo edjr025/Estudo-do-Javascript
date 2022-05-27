@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escopo de Variavel</title>
+</head>
+<body>
+    <h1>Escopo de Variavel</h1>
+
+    <p id="msg"></p>
+    <p id="msg2"></p>
+    <p id="msg3"></p>
+
+    <button onclick="teste()">Mostrar Var do escopo de Função</button>
+    <button onclick="adicionar(10,5)">Mostrar Var do escopo de Local</button>
+
+    <script>
+
+        //escopo Global
+        var nome = 'Edvaldo'
+        document.getElementById('msg').innerHTML = 'variavel nome do escopo global ' + nome
+        
+
+        //escopo de função
+        function teste(){
+            var nome = 'Junior'
+            document.getElementById('msg2').innerHTML = 'variavel nome do escopo de função ' + nome
+        }
+
+        //obs os parametros de uma funçaõ são variaveis locais
+        function adicionar(x,y){
+            var resultado = x + y
+            return document.getElementById('msg3').innerHTML = 'variavel resultado do escopo  locais ' + resultado
+        }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos personalizados</title>
+</head>
+<body>
+    
+    <script>
+        
+//objetos personalizados
+
+		//maniera formal de declarar objetos
+		let person = new Object()
+		person.name = 'João'
+		
+		//forma literal de desclara objetos
+		let person2 = {
+			name: 'WebDesign',
+			age: 10,
+			status: false,
+			array: ['profissional', 'design', 'website'],
+			work: function(){ alert('isso é uma função')},
+			obj: {
+				id: 3,
+				tipo: 'A'
+			},
+			//chamando um objeto dentro de outro objeto
+			support: person,
+			userThis: function(){
+				return this.age
+			}
+			
+		}
+		
+		console.log(person2.support)
+		console.log(person2.support.name)
+		console.log(person2.userThis())
+		
+    </script>
+</body>
+</html>

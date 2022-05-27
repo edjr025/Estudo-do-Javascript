@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução a Eventos</title>
+</head>
+<body>
+
+    <h1>Introdução a Eventos</h1>
+
+   
+
+    <!--o 1º evento e o mais usado é o onclick-->
+    <button type="button" onclick="mostrarCaixa()">Mostre</button>
+
+    <!--outro evento é o onmousemove que é executado quando o curso do mouse passa sobre um elemento-->
+    <p onmousemove="passarMouse()">Passe o mouse aqui</p>
+    
+    <script>
+
+        //função que será chamada no click do botão
+        function mostrarCaixa(){
+            alert('olá mundo')
+        }
+
+        function passarMouse(){
+            alert('o mouse passou sobre o paragrafo')
+        }
+
+    </script>
+</body>
+</html>

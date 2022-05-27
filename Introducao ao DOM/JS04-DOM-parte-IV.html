@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document links</title>
+
+    <style type="text/css">
+        img{
+            width: 150px;
+            height: 150px;
+            margin-right: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1> document links array de hiperligações do DOM</h1>
+
+    <a href="www.google.com">Google</a>
+    <a href="www.ge.globo.com">Globo Esporte</a>
+    <a href="www.g1.globo.com">G1</a>
+
+    <p id="msg"></p>
+    <p id="url"></p>
+    <p id="titulo"></p>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <img src="img/img1.png" alt="">
+    <img src="img/img2.png" alt="">
+    <img src="img/img4.png" alt="">
+    
+
+    <script>
+        var hiperlinks = document.links
+        var p = document.getElementById('msg')
+
+        //mostrando a quantidade de links q tem na pagina
+        p.innerHTML = hiperlinks.length
+
+        //trocando o texto do segundo link para de Globo Esporte para GE
+        hiperlinks[1].innerHTML = 'GE'
+
+        //trocando o texto e o endereço do link
+        hiperlinks[2].innerHTML = 'Uol.com'
+        hiperlinks[2].href = 'https://www.uol.com.br/'
+
+        //pegando a URL da pagina
+        var url = document.getElementById('url').innerHTML = document.URL
+        //pegando o titulo da pagina
+        var titulo = document.getElementById('titulo').innerHTML = document.title
+
+        //trocando imagens com o document.images
+        
+            var imagens = document.images
+            //console.log(imagens)
+            imagens[1].src="img3.png"
+      
+       
+    </script>
+</body>
+</html>

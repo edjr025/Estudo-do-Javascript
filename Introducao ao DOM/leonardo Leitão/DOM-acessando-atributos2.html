@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acessando Attributos 2</title>
+</head>
+<body>
+    <div>
+        <label for="compras">Compras</label>
+        <ul id="compras" destino='escritorio' data-urgencia="5"> 
+            <li>Café</li>
+            <li>Água</li>
+            <li>Copo Descartavel</li>
+        </ul>
+    </div>
+    
+    <script>
+        const lista = document.querySelector('div ul[destino="escritorio"]') //esse seletor poderia ser só o ID
+        console.log('elemento "ul" .............')
+        console.log('childNodes', lista.childNodes)
+        console.log('id', lista.id)
+        console.log('destino', lista.destino)
+        console.log('getAtribute', lista.getAttribute('destino'))
+        console.log('hasAttribute', lista.hasAttribute('destino'))
+        lista.setAttribute('destino', 'empresa') //o atributo destino agora vai ter o valor > empresa
+        console.log('getAtribute', lista.getAttribute('destino'))
+
+        lista.setAttribute('status', 'aberto') //criando um novo atributo e dando um valor pra ele
+
+        lista.removeAttribute('destino')
+        console.log(lista.dataset)
+        console.log(lista.dataset.urgencia)
+        lista.dataset.urgencia = 4
+        console.log(lista.getAttribute('data-urgencia'))
+
+        //cuidado
+        const label = document.querySelector('label')
+        console.log(label.for) //isso aqui vai dar undenied pois for é restrito da linguagem
+        console.log(label.htmlFor)
+        console.log(label.getAttribute('for'))
+    </script>
+</body>
+</html>

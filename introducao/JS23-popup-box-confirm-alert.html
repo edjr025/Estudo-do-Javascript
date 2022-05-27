@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup Confirm e Alert</title>
+</head>
+<body>
+    <h1>Popup Confirm e Alert</h1>
+
+    <button onclick="mostrarMsg()">Abrir Alert</button>
+    <button onclick="mostrarMsgConfirm()">Abrir popup de confirm</button>
+    <script>
+
+     alert('isso é um popup de alert \n houve uma quebra de linha')
+
+      function mostrarMsg(){
+          alert('isso é um alert box')
+      }
+
+      function mostrarMsgConfirm(){
+
+         var resposta = confirm('isso é uma popup de confirm')
+
+         if(resposta == true){ //se clicar no ok da caixa
+            document.write('clicou em OK')
+         }else //se clicar no cancel da caixa >> o valor será false
+         document.write('clicou em Cancel')
+      }
+    </script>
+</body>
+</html>

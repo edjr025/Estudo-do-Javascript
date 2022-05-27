@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>destruturing</title>
+</head>
+<body>
+    <script>
+        let fornecedores = ['Apple', 'Asus', 'LG', 'Sansung']
+
+let [fornecedor1,fornecedor2, fornecedor3, fornecedor4,  fornecedor5 = 'indefenido'] = fornecedores
+        /*esse 'indefinido' é  um valor padrão, então se colocarmos mais um fornecedor no
+        array fornecedores esse valor sera atrelado a variavel fonecedore5
+        */
+        console.log(fornecedor1)
+        console.log(fornecedor2)
+        console.log(fornecedor3)
+        console.log(fornecedor4)
+        console.log(fornecedor5)
+
+        let cliente = {
+            nome: 'joao',
+            email: 'jk@gmail',
+            telefone: '98745612'
+        }
+
+        let {nome, email, telefone} = cliente
+        console.log(nome)
+        console.log(email)
+        console.log(telefone)
+    </script>
+</body>
+</html>

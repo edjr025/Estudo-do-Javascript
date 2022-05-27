@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This e a função Bind</title>
+</head>
+<body>
+    
+
+    <script>
+        const pessoa = {
+            saudacao: 'Bom dia',
+            falar() {
+                console.log(this.saudacao)
+            }
+        }
+        pessoa.falar()
+
+        const falar = pessoa.falar
+        falar() //conflito entre paradigams: funcional e o OO
+
+
+        const falarDePessoa = pessoa.falar.bind(pessoa) //o bind faz a função apontar sempre pra seu this de origem(pra seu componente) 
+        falarDePessoa()
+    </script>
+</body>
+</html>

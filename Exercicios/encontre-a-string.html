@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encontre a String</title>
+</head>
+<body>
+    <h1>Treinamento JS</h1>
+
+    <script>
+        const filme ={
+            titulo: 'Vingadores',
+            ano: 2018,
+            diretor: 'Robin',
+            personagem: 'Thor',
+            rating: 8.5,
+            duracao: 2.50
+        }
+
+        //console.log(typeof(filme.titulo))
+
+        /*
+            o intuito desse exercicio é printar no console apenas as propriedade de um objeto
+            que são do tipo string
+        */
+
+        exibirPropriedades(filme)
+
+        function exibirPropriedades(obj){
+            for (let f in obj) {
+                if(typeof obj[f] == 'string'){
+                    console.log(f, obj[f])
+                }
+            }
+        }
+    </script>
+</body>
+</html>

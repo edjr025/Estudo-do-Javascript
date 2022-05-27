@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap');
+
+        body{
+            font-family: 'Orbitron', sans-serif;
+            background-color: #07060a;
+            color: #ff0000;
+            font-size: 42px;
+            text-align: center;
+        }
+
+        img{
+            max-width: 100%;
+            cursor: pointer;
+        }
+
+    </style>
+
+</head>
+<body>
+    <!--<h1>Countdown</h1>-->
+
+    <p id="time">Countdown</p>
+
+    <img src="xm.png" alt="Countdown" id="fire" onclick="xequeMate()">
+
+    <script>
+        var check = false;
+
+        function xequeMate(){
+            if(check == false){
+                var timer1 = setInterval(function(){start()}, 1000)
+                var timer2 = setTimeout(function(){end()}, 13200)
+                var count = 10;
+               function start(){
+                    soundBeep()
+                    document.getElementById('time').innerHTML = count
+                    //if montando por mim para parar a contagem
+                    if(count == 0){
+                        clearInterval(timer1)
+                        document.getElementById('fire').src = 'explosion.gif'
+                        document.getElementById('time').innerHTML = 'GAME OVER'
+                        soundThunder()
+                    }
+                    count--;
+               }
+                check = true;
+            }   
+        }
+
+        function soundThunder(){
+            var beep = new Audio();
+                beep.src = 'Thunder_Crack.mp3';
+                beep.play();
+        }
+
+        function soundBeep(){
+            var beep = new Audio();
+                beep.src = 'Beep_Short.mp3';
+                beep.play();
+        }
+
+        function end(){
+            document.getElementById('fire').src = 'clean.png'
+        }
+    </script>
+</body>
+</html>

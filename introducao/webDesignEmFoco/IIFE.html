@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Immediately invoked function expression (IIFE)</title>
+</head>
+<body>
+    <script>
+
+        /*
+            Com o IIFE não precisamos chamar a função, ela já é alto executavel
+        */
+
+        // (function(){
+        //     console.log('executando.....')
+        // })()
+
+        //é importante usar i use strict nas funções pq evita o vazamento de escopo po parte das variaveis alem de não deixa o this referencia o objeto window    
+        (function(win, doc){
+            'use strict'
+            let x = 20
+            console.log(x)
+            console.log(win)
+            console.log(doc)
+            console.log(this)
+        })(window, document)
+    </script>
+</body>
+</html>

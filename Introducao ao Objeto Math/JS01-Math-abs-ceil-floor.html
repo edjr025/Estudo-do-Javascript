@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objeto Math</title>
+</head>
+<body>
+    <h1>Objeto Math Introdução</h1>
+
+    <p id="msg"></p>
+    <p id="newmsg"></p>
+    <p id="ms3"></p>
+
+    <script>
+        var valor = -3
+        var inteiro = 3.14
+
+        //valor absoluto
+        document.getElementById('msg').innerHTML = Math.abs(valor)
+        document.write('</br>')
+
+        //metodo ceil para arredonar pra cima
+        document.getElementById('newmsg').innerHTML = Math.ceil(inteiro)
+        document.write('</br>')
+
+        //metodo floor para arredondar pra baixo
+        document.getElementById('ms3').innerHTML = Math.floor(inteiro)
+    </script>
+</body>
+</html>

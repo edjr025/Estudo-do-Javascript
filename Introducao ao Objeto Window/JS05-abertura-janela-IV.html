@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de impressão de janelas</title>
+</head>
+<body>
+    <h1>Sistema de impressão de janelas web com JavaScrip</h1>
+
+    <p id="msg"></p>
+    <p id="msg2"></p>
+    <p id="msg3"></p>
+    <p id="msg4"></p>
+    <p id="msg5"></p>
+    <p id="msg6"></p>
+    <p id="msg7"></p>
+
+    
+    <button onclick="abrirJanela()">Abrir Janela</button>
+    <button onclick="imprimir()">Imprimir</button>
+    
+
+    <script>
+
+        var novaJanela
+
+        function abrirJanela(){
+            novaJanela = window.open('', '', 'width = 300, height = 300')
+            novaJanela.document.write(
+                'Este texto serve de exemplo para impressão Este texto serve de exemplo para impressão Este texto serve de exemplo para impressão Este texto serve de exemplo para impressão Este texto serve de exemplo para impressãoEste texto serve de exemplo para impressãoEste texto serve de exemplo para impressão Este texto serve de exemplo para impressão Este texto serve de exemplo para impressão'
+            )
+        }
+
+        function imprimir(){
+            //só pra dar o foco na janela
+            novaJanela.focus()
+            novaJanela.print()
+            
+        }
+    </script>
+</body>
+</html>

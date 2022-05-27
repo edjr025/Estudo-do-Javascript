@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScrollBy e ScrollTo</title>
+</head>
+<body>
+    <h1>ScrollBy e ScrollTo</h1>
+
+    <p id="msg"></p>
+    <p id="msg2"></p>
+    <p id="msg3"></p>
+    <p id="msg4"></p>
+    <p id="msg5"></p>
+    <p id="msg6"></p>
+    <p id="msg7"></p>
+
+    
+    <button onclick="moverJanela()">Mover Janela</button>
+    <button onclick="abrirJanela()">abrir Janela</button>
+    <button onclick="mudarTamanho()">Mudar Tamanho</button>
+    <button onclick="diminuirJanela()">Diminuir Janela</button>
+    <button onclick="moverBarra()">Mover scroll</button>
+    <button onclick="moverPara()">Mover Para</button>
+
+    <script>
+
+        var novaJanela
+
+        //para ver o funcionamento disso, reduza o tamanho da janela e depois clica no botão verifica
+        //depois clique em mover janela
+        function moverJanela(){
+            novaJanela.moveBy(50,50)
+        }
+
+       
+        function abrirJanela(){
+            novaJanela = window.open('', '', 'width = 400, height=300, left = 500, top = 200')
+            novaJanela.document.write('meu novo texto em java script meu novo texto em java script  meu novo texto em java script meu novo texto em java script  meu novo texto em java script  meu novo texto em java script  meu novo texto em java script meu novo texto em java script  meu novo texto em java script meu novo texto em java script meu novo texto em java script meu novo texto em java script meu novo texto em java script  meu novo texto em java script meu novo texto em java script  meu novo texto em java script  meu novo texto em java script  meu novo texto em java script meu novo texto em java script  meu novo texto em java script meu novo texto em java script meu novo texto em java script meu novo texto em java script meu novo texto em java script  meu novo texto em java script meu novo texto em java script  meu novo texto em java script  meu novo texto em java script  meu novo texto em java script meu novo texto em java script  meu novo texto em java script meu novo texto em java script meu novo texto em java script meu novo texto em java script meu novo texto em java script  meu novo texto em java script meu novo texto em java script  meu novo texto em java script  meu novo texto em java script  meu novo texto em java script meu novo texto em java script  meu novo texto em java script meu novo texto em java script meu novo texto em java script meu novo texto em java script meu novo texto em java script  meu novo texto em java script meu novo texto em java script  meu novo texto em java script  meu novo texto em java script  meu novo texto em java script meu novo texto em java script  meu novo texto em java script meu novo texto em java script meu novo texto em java script meu novo texto em java script meu novo texto em java script  meu novo texto em java script meu novo texto em java script  meu novo texto em java script  meu novo texto em java script  meu novo texto em java script meu novo texto em java script  meu novo texto em java script meu novo texto em java script meu novo texto em java scriptmeu novo texto em java script meu novo texto em java script  meu novo texto em java script meu novo texto em java script  meu novo texto em java script  meu novo texto em java script  meu novo texto em java script meu novo texto em java script  meu novo texto em java script meu novo texto em java script meu novo texto em java script meu novo texto em java script meu novo texto em java script  meu novo texto em java script meu novo texto em java script  meu novo texto em java script  meu novo texto em java script  meu novo texto em java script meu novo texto em java script  meu novo texto em java script meu novo texto em java script meu novo texto em java script meu novo texto em java script meu novo texto em java script  meu novo texto em java script meu novo texto em java script  meu novo texto em java script  meu novo texto em java script  meu novo texto em java script meu novo texto em java script  meu novo texto em java script meu novo texto em java script meu novo texto em java script')
+        }
+
+       
+        function mudarTamanho(){
+            novaJanela.resizeBy(200,80)
+            novaJanela.focus()
+        }
+
+        function diminuirJanela(){
+            novaJanela.resizeTo(100, 80)
+            novaJanela.focus()
+        }
+
+        //movendo a barra lateral do scroll
+        function moverBarra(){
+            novaJanela.scrollBy(0,20)
+            novaJanela.focus()
+        }
+
+        //move o scroll para 250px(segundo parametro)
+        function moverPara(){
+            novaJanela.scrollTo(0,250)
+            novaJanela.focus()
+        }
+    </script>
+</body>
+</html>

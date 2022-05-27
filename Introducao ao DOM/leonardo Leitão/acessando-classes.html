@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acessando Classes</title>
+
+    <style>
+        .destaque{
+            border: 1px solid red;
+            padding: 20px;
+        }
+
+        .destaque2{
+            background-color: blue;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        Classes
+    </div>
+
+    <script>
+        //const classes = document.querySelector('div').classList
+        const div = document.querySelector('div')
+        const classes = div.classList
+        classes.add('destaque')
+        classes.remove('destaque')
+        classes.toggle('destaque')
+        console.log(classes.contains('destaque'))
+        console.log(classes.length)
+        classes.toggle('destaque')
+        console.log(classes.length)
+        classes.add('destaque')
+        classes.add('destaque2')
+        console.log(classes.length)
+
+        for(let c of classes){
+            console.log(c)
+        }
+
+        classes.forEach(c => console.log(c))
+
+        //transformando em array
+        Array.from(classes)
+        console.log(Array.from(classes))
+        console.log([...classes]) //spread
+    </script>
+</body>
+</html>

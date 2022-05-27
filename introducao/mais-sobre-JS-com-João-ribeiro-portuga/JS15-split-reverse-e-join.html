@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REVERSE, SPLIT E JOIN</title>
+</head>
+<body>
+    <script>
+        let emails = "joao@gmail.com, ana@hotmail.com, pedro@outlook.com"
+        let colecaoEmail = emails.split(',')
+        console.table(colecaoEmail)
+
+        console.log('-'.repeat(50))
+
+        let enderecos = "joao@gmail.com, ana@hotmail.com, pedro@outlook.com, carlosc3@yahoo.com, marta23@gmail.com, bia036@hotmail.com"
+
+        let colecao2 = enderecos.split(',').map(e => {
+            return e.trim()
+        })
+        
+        console.table(colecao2)
+
+        let colecao = ['joão', 'ana', 'marcos']
+        let string1 = colecao.join('')
+        let string2 = colecao.join(';')
+        let string3 = colecao.join(' e ')
+        console.log(string1)
+        console.log(string2)
+        console.log(string3)
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos</title>
+</head>
+<body>
+    <h1>Objetos</h1>
+
+
+    <script>
+
+        //declarando e inicializando objetos
+        var socio1 = new Socio('Vitor', 'Ferreira', 22)
+        var socio2 = new Socio('Ricardo', 'Rodrigues', 34)
+
+        document.write(socio1.nome + ' ' + socio1.sobreNome + "</br>")
+        document.write(socio2.nome + ' ' + socio2.sobreNome + "</br>")
+
+        document.write(socio1.diferencaIdade(), "</br>")  //aqui trazemos os () ja que diferença idade recebe a função calcularDiferenca
+
+        //função criada para inicializar os objetos acima socio1 e socio2  isso pode ser chamado de construtor
+        function Socio(n, s, i){
+            this.nome = n
+            this.sobreNome = s
+            this.idade = i
+            //metodo
+            this.diferencaIdade = calcularDiferenca; //aqui não colocaremos o ()
+        }
+
+        function calcularDiferenca(){
+            var diferenca = 100 - this.idade
+            return diferenca
+        }
+
+
+        //objetos initializers || mais usado
+
+        var socio = {nome: 'Edvaldo', idade: 27, apelido: 'Zakumy'}
+        document.write(socio.nome + ' ' + socio.idade + ' ' + socio.apelido)
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="noticia">
+        <h1>titulo da noticia <strong>Urgente</strong></h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+    </div>
+
+    <div id="divi">
+        <h1>titulo da noticia 2</h1>
+        <h2>Subtitulo</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+    </div>
+
+    <div class="tit">
+        <h1>titulo da noticia 3</h1>
+        <h2>Subtitulo</h2>
+    </div>
+
+    <img id="news" src="img1.webp" width="500px" alt="noticias">
+
+
+    <script>
+        
+        let elemento = document.querySelector('.noticia > h1')
+        elemento.innerHTML = 'Novo <u> texto</u>'
+        console.log(elemento.outerHTML)
+
+        let elemento2 = document.querySelector('#divi > h2')
+        elemento2.innerText = 'um subtitulo <u>novo</u>'  //aqui ele pega as tag <u> e printa no elemento
+        console.log(elemento.outerHTML)
+
+        let elemento3 = document.querySelector('.tit > h2')
+        elemento3.outerHTML = '<p>agora é um paragrafo</p>'// (outerHTML) só mexe no resultado visual 
+        console.log(elemento.outerHTML)
+
+        let imagem = document.querySelector('#news')
+        imagem.src = 'img3.jpg'
+        console.log(imagem.alt)
+    </script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodos de array</title>
+</head>
+<body>
+    <h1>Metodo de Array mais utilizados</h1>
+
+    <script>
+        let array1 = [1, 2, 3, 4, 5]
+        let array2 = ['a', 'b', 'c', 'd', 'e']
+        let letras1 = ['a', 'x', 'z', 'a', 'n', 'b', 'a', 'p']
+        let letras = ['a', 'x', 'z']
+        let alfabeto = ['m', 'g', 'b', 'w', 'a', 'p', 'h']
+
+        /*concat*/
+        let juntar = array1.concat(array2)
+        console.log(juntar)
+
+        /*every*/
+        // console.log(array1.every((elem) => elem >= 10)) --- usando arrow function
+        let everi1 = array1.every((el) => el > 10)
+        console.log(everi1)
+
+        let everi2 = juntar.every(function verificarElementos(el, index, obj){
+            return (typeof el == 'number') //todos os dados desse array são numero?  false
+        })
+        console.log(everi2)
+
+        /*filter*/
+        let filtrar = array1.filter((el) => el >= 4)
+        console.log(filtrar)
+
+        let filtrar2 = juntar.filter(function pegarStrings(el){
+            return (typeof el == 'string')
+        })
+        console.log(filtrar2)
+
+        /*ForEach*/
+        let each = letras.forEach((el) => {
+            console.log(el)
+        })
+
+        /*indexOf*/
+        let indice = array2.indexOf('b')
+        console.log(indice)
+
+        let indice2 = letras.indexOf('k')
+        if(indice2 == -1){
+            console.log(indice2, ' >> elemento não existe no array')
+        }
+
+        /*lastIndexOf*/
+        let ultimoAparicao = letras1.lastIndexOf('a')
+        console.log('a letra (a) aparece pela ultima vez na posicao: ', ultimoAparicao)
+
+        /*join*/
+        let separador = array1.join('-')
+        console.log(separador)
+
+        /*Map*/
+        let mapear = array1.map(function dobrar(r){
+            return r * 2
+        })
+
+        console.log(mapear)
+
+        let mapear2 = array2.map((letra) => letra + 'xx')
+        console.log(mapear2)
+
+        /*Push*/
+        array1.push(13)
+        console.log(array1)
+
+        /*Pop*/
+        array2.pop()
+        console.log(array2) //tirou a ultima letra do array, a letra e
+
+        let x =  letras.some((el) => {
+            return (typeof el == 'string')
+        })
+        console.log(x)
+
+        /*reverse*/
+        let reverter = array2.reverse()
+        console.log(reverter)
+
+        /*reduce*/
+        let reduzir = array1.reduce(function somar(acc,atual){
+            return acc + atual
+        })
+        console.log(reduzir)
+
+        let reduceInverso = juntar.reduceRight(function reduzirAoContrario(acc,atual){
+            return acc + atual
+        })
+        console.log(reduceInverso)
+
+        /*shift*/
+        let retirarPrimeiro = array2.shift()
+        console.log(retirarPrimeiro)
+
+        /*slice*/
+        let cortarArray = letras1.slice(2,5)
+        console.log(cortarArray)
+
+        /*sort*/
+        let ordenar = alfabeto.sort()
+        console.log(ordenar)
+
+        /*splice*/ //esse metodo é muito usado
+        let removerApartirDeUmaPosicao = letras1.splice(3,2)
+        console.log(removerApartirDeUmaPosicao)
+
+        let trocarNumeros = array1.splice(2,3,99,25) 
+        console.log(trocarNumeros)
+        console.log(array1)
+
+        /*unshift*/
+        let colocarNoIncio = array1.unshift(-1, 0, 1)
+        console.log(array1)
+
+    </script>
+</body>
+</html>

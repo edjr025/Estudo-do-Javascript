@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Função Filter</title>
+</head>
+<body>
+    <h1>Metodos Avançados de Array(Filter)</h1>
+
+    <p id="msg"></p>
+    <p id="msg1"></p>
+    <p id="msg2"></p>
+    <p id="msg3"></p>
+    <p id="msg4"></p>
+    <p id="msg5"></p>
+    <p id="msg6"></p>
+    <p id="msg7"></p>
+
+
+    <script>
+        
+        const numbers = [2, 3, 4, 5, 4, 12, 19, 7, 2, 5]
+        document.getElementById('msg').innerHTML = numbers
+
+        const uniqueArray = numbers.filter((elem, index, arr) => arr.indexOf(elem) == index)
+        document.getElementById('msg1').innerHTML = uniqueArray
+
+        const preco = [
+            'credito',
+            'R$ 200',
+            'contas a pagar',
+            'R$ 400',
+            'R$ 600',
+            'Dinheiro',
+            'A vista',
+            'R$ 880'
+        ]
+        document.getElementById('msg2').innerHTML = preco
+
+        const filtroDePrecos = preco.filter(preco => preco.includes('R$'))
+        document.getElementById('msg3').innerHTML = filtroDePrecos
+
+
+        //pegando só o valores maiores que 7
+        const notas = [7.1, 6.2, 5.4, 9.0, 8.8, 10.0]
+
+        function maiorQue7(num){
+            if(num >= 7){
+                return num
+            }else{
+                return false
+            }
+        }
+
+        const resultadoFinal = notas.filter(maiorQue7)
+        console.log(resultadoFinal)
+
+        
+
+        //outra forma
+        const notas2 = [7.1, 8.3, 6.3, 7.7, 9.1, 4.3, 2.1]
+
+        function aprovado(nota){
+            return nota >=7
+        }
+
+        const resultado = notas2.filter(aprovado)
+        console.table(resultado)
+    </script>
+</body>
+</html>

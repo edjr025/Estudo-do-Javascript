@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usando QuerySelector </title>
+</head>
+<body>
+    <input type="text" placeholder="Digite seu nome" name="" id="texto">
+    <button onclick="minhaFuncao()">Clique aqui</button>
+
+    <input type="number" id="n1">
+    <input type="number" id="n2">
+    <button onclick="somar()">somar</button>
+
+    <script>
+
+        function minhaFuncao(){
+            let texto = document.querySelector('#texto').value
+            alert(texto)
+        }
+
+        function somar(){
+            let n1 = parseInt(document.querySelector("#n1").value) 
+            let n2 = parseInt(document.querySelector("#n2").value) 
+
+            alert(n1 + n2)
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fizz Buzz</title>
+</head>
+<body>
+    <h1>Treinamento JS</h1>
+
+    <script>
+
+        const resultado = fizzBuzz(60)
+        console.log(resultado)
+
+        function fizzBuzz(valor){
+            if(typeof valor != 'number'){
+                return 'Não é um numero'
+            }
+            if(valor % 3 == 0 && valor % 5 == 0){
+              return console.log('FizzBuzz')  //nem precisa do console.log
+            }   
+             if(valor % 3 == 0){
+               return console.log('Fizz')
+            }
+           
+            if(valor % 5 == 0){
+               return console.log('Buzz')
+            }
+        }
+    </script>
+</body>
+</html>

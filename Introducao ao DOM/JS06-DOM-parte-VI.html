@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM parte VI</title>
+
+    <style>
+        img{
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>DOM parte VI</h1>
+
+    <button onclick="teste()">Mudar Imagem</button>
+
+    <div>
+        <img id="imagem" src="img/img1.png" alt="">
+    </div>
+
+
+    <script>
+       
+       var valor = true
+       function teste(){
+          var elemento = document.querySelector('#imagem')
+        //   elemento.setAttribute('src','img2.png')
+
+        //analisar imagem apresentada
+
+        //essa bosta não funcionar
+        if(valor){
+            elemento.setAttribute('src', 'img1.png')
+            valor = false
+        }else{
+            elemento.setAttribute('src','img2.png')
+            valor = true
+        }
+       }
+       
+    </script>
+</body>
+</html>

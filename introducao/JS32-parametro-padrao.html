@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>parametro padrão</title>
+</head>
+<body>
+    
+    <script>
+        //estrategia 1 para gerar valor padrão
+        function soma(a,b,c){
+            a = a || 1
+            b = b || 1
+            c = c || 1
+
+            return a + b + c
+        }
+        console.log(soma(), soma(3), soma(1,2,3), soma(0,0,0))
+        console.log(soma())
+        console.log(soma(6))
+
+        //estrategia 2,3 e 4 para gerar valor padrão
+        function soma2(a,b,c){
+            a = a !== undefined ? a : 1 
+            b = 1 in arguments ? b : 1  //existe b no argumrnto da função?
+            c = isNaN(c) ? 1 : c  //c é not a number? se sim pega o valor 1 como padrão senão pegue o proprio c
+
+            return a + b + c
+        }
+
+        console.log(soma2(), soma2(3), soma2(1,2,3), soma2(0,0,0))
+
+        //valor pasrão no ECHMA 2015
+        function soma3(a = 1 , b = 1, c = 1){
+            return a + b + c
+        }
+
+        console.log(soma3(), soma3(3), soma3(1,2,3), soma3(0,0,0))
+    </script>
+</body>
+</html>

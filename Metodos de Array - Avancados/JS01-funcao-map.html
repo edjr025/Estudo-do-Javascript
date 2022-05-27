@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Função Map</title>
+</head>
+<body>
+    <h1>Metodos Avançados de Array(Map)</h1>
+
+    <p id="msg"></p>
+    <p id="msg1"></p>
+    <p id="msg2"></p>
+    <p id="msg3"></p>
+    <p id="msg4"></p>
+    <p id="msg5"></p>
+    <p id="msg6"></p>
+    <p id="msg7"></p>
+
+
+    <script>
+        //1ª forma de escrever(padrão)
+        const numbers = [1, 4, 5, 9, 14, 23]
+        document.getElementById('msg').innerHTML = numbers
+
+        const doubleNumbers = numbers.map( function(elem){
+            return elem * 2
+        })
+        document.getElementById('msg1').innerHTML = doubleNumbers
+
+        //2ª forma de escrever usando uma função anonima
+        const numeros = [1, 2, 3, 4, 5]
+        document.getElementById('msg2').innerHTML = numeros
+        //criando a função que será passada como parametro da função Map
+        function dobrarNumeros(num){
+            return num * 2
+        }
+        const dobroDeNumeros = numeros.map(dobrarNumeros)
+        document.getElementById('msg3').innerHTML = dobroDeNumeros
+
+        //3ª forma de fazer, usando o arrow function
+        const nubs = [10, 15, 35, 65]
+        document.getElementById('msg4').innerHTML = nubs
+
+        const results = nubs.map(nums => nums * 2)
+        document.getElementById('msg5').innerHTML = results
+
+        //exemplo pratico conversor de temperaturas
+        // const fahrenheit = [0, 32, 45, 50, 75, 80, 120]
+        // document.getElementById('msg6').innerHTML = 'temperaturas em fahrenheit: ' + fahrenheit
+        // const celsius = fahrenheit.map(function(e){
+        //     return Math.round((e - 32) * 5/9)
+        // })
+        // document.getElementById('msg7').innerHTML = 'conversão para Celsius: ' + celsius
+
+        //exemplo pratico conversor de temperaturas simplificado com arrow function
+        const fahrenheit = [0, 32, 45, 50, 75, 80, 120]
+        document.getElementById('msg6').innerHTML = 'temperaturas em fahrenheit: ' + fahrenheit
+
+        const celsius = fahrenheit.map(e => Math.round((e - 32) * 5/9))
+        document.getElementById('msg7').innerHTML = 'conversão para Celsius: ' + celsius
+
+        //transformando um array de objetos em um arrya de valores calculados
+        const arrayDeprodutos = [
+            {nome: '', preco: 23.67, desconto: 0.2},
+            {nome: '', preco: 120.99, desconto: 0.3},
+            {nome: '', preco: 3567.67, desconto: 0.5},
+            {nome: '', preco: 10.80, desconto: 0.1},
+            {nome: '', preco: 7.43, desconto: 0.05},
+            {nome: '', preco: 12355.33, desconto: 0.15}
+        ]
+
+        function getCusto(precoComDesconto){
+            return parseInt(precoComDesconto * 0.3) 
+        }
+
+        function getPrecoComDesconto(produto){
+            return produto.preco * (1 - produto.desconto)
+        }
+
+
+        const resultadoFinal = arrayDeprodutos.map(getPrecoComDesconto)
+        console.log(resultadoFinal)
+
+        const resultadoCusto = arrayDeprodutos.map(getPrecoComDesconto).map(getCusto)
+        console.table(resultadoCusto)
+    </script>
+</body>
+</html>

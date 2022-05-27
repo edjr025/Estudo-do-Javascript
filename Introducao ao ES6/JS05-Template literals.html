@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template literals</title>
+</head>
+<body>
+    <h1>Template literals ou Template strings</h1>
+
+    <p id="msg"></p>
+    <p id="texto"></p>
+
+    <script>
+        let pessoa = {
+            nome: 'Junior'
+        }
+
+        let carro = {
+            marca: 'Mercedez',
+            ano: 2000
+        }
+
+        let frase = `ola Sr. ${pessoa.nome} você possui um carro de ano ${carro.ano} e de marca ${carro.marca}`
+        document.getElementById('msg').innerHTML = frase
+
+        document.getElementById('texto').innerHTML = `texto usando
+                                                    o template strings`
+    </script>
+</body>
+</html>

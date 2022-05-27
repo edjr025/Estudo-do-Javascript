@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eventos</title>
+</head>
+<body>
+
+
+    <form name="form" id="form" action="page2.php">
+        <button id="btn2" type="submit">Submit</button>
+    </form>
+
+    <script>
+        (function(win,doc){
+            'use strict'
+
+            let btn = doc.querySelector('#btn2')
+            //nos eventos é muito importante o metodo target e a propriedade target
+            function alertar(e){
+                e.preventDefault()
+                console.log('forma not send')
+                console.log(e.target)
+            }
+
+            btn.addEventListener('click',alertar)
+        })(window,document)
+    </script>
+</body>
+</html>

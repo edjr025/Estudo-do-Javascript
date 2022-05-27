@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async await</title>
+</head>
+<body>
+    
+    <script>
+        //ver a aula 186
+
+        function esperarPor(tempo = 2000){
+            return new Promise(function(resolve){
+                setTimeout(function(){
+                    console.log('executando promise')
+                    resolve()
+                },tempo)
+            })
+        }
+
+        esperarPor(3000)
+        .then(esperarPor)
+        .then(esperarPor)
+
+       async function executar(){
+           await esperarPor(5000)
+           console.log('async/await 1')
+        }
+
+        executar()
+    </script>
+</body>
+</html>

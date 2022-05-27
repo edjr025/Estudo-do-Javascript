@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>top e left, moveBy e moveTo e Focus</title>
+</head>
+<body>
+    <h1>Criando janelas, definindo top e left, moveBy e moveTo e Focus</h1>
+
+    <p id="msg"></p>
+    <p id="msg2"></p>
+    <p id="msg3"></p>
+    <p id="msg4"></p>
+    <p id="msg5"></p>
+    <p id="msg6"></p>
+    <p id="msg7"></p>
+
+    
+    <button onclick="moverJanela()">Mover Janela</button>
+    <button onclick="verificar()">Verificar</button>
+    <button onclick="moverPara()">Mover Para</button>
+    <button onclick="focarJanela()">Colocar Janela em Foco</button>
+
+    <script>
+
+        var novaJanela
+
+        //para ver o funcionamento disso, reduza o tamanho da janela e depois clica no botão verifica
+        //depois clique em mover janela
+        function moverJanela(){
+            novaJanela.moveBy(50,50)
+        }
+
+        //abrindo a janela com umas configurações pre-definidas
+        function verificar(){
+            novaJanela = window.open('', '', 'width = 400, height=300, left = 500, top = 200')
+        }
+
+        //move a janela para uma coordenada especifica
+        function moverPara(){
+            novaJanela.moveTo(0,0)
+        }
+
+        function focarJanela(){
+            novaJanela.focus()
+        }
+    </script>
+</body>
+</html>

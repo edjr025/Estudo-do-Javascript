@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parametro Target </title>
+
+    <style type="text/css">
+        input:nth-child(5){
+            width: 250px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <h1>Parametro Target nas funções de eventos</h1>
+
+    <p id="texto"></p>
+    <p id="tecla"></p>
+
+    <input type="text" id="t1" placeholder="digite algo">
+    
+
+    <script>
+
+      var texto1 = document.getElementById('t1')
+      var msg = document.getElementById('texto')
+      var tecla = document.getElementById('tecla')
+
+      //passamos um event como parametro para o metodo teclaPerssionada
+      texto1.onkeypress = function(){teclaPressionada(event)}
+
+      function teclaPressionada(event){
+          msg.innerHTML = 'tecla pressionada no  input:'
+          //pegamos o valor digita no input(event.target.value) e colocamos ele no paragrafo de ID tecla
+          tecla.innerHTML = event.target.value
+          console.log(event)
+      }
+
+
+    </script>
+</body>
+</html>

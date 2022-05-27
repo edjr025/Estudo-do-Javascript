@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Função Eval </title>
+</head>
+<body>
+    <h1>Função Eval</h1>
+
+   <p id="msg"></p>
+   <p id="msg2"></p>
+   <p id="msg3"></p>
+
+    <script>
+
+      //precisamos usar expressões matematica pra dar certo
+      var valor = '10 + 20'
+
+      //fazendo o eval interpretar um script
+      var scripts = 'var numero1 = 10; var numero2 = 15; document.write(numero1 + numero2)'
+
+      document.getElementById('msg').innerHTML = eval(valor)
+
+      document.getElementById('msg2').innerHTML = eval(scripts)
+
+
+
+    </script>
+</body>
+</html>

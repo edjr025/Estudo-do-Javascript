@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread operator</title>
+</head>
+<body>
+    <h1>Spread operator</h1>
+
+    <p id="msg"></p>
+    <p id="msg2"></p>
+
+    <button onclick="teste()">teste</button>
+    <br>
+    <br>
+
+    <script>
+        let professor = ['joão', 'maria', 'jose']
+        let aluno = ['pedro', 'debora', 'felipe']
+
+        let frase = 'esta e uma frase'
+
+        //operador spread ...
+        let pessoas = [professor, ...aluno]
+        document.write(pessoas)
+
+        //2ª forma de usar spread  separando as letras de um string
+        let caracter = [...frase]
+        document.getElementById('msg').innerHTML = caracter
+
+        //3ª forma de usar spread >> usando o spread para passa parametros para um array
+
+        function teste(){
+            let dados = [10,15,30]
+            let resultado = adicao(...dados)
+            document.getElementById('msg2').innerHTML = resultado
+        }
+
+        function adicao(x, y, z){
+            return x + y + z
+        }
+
+    </script>
+</body>
+</html>

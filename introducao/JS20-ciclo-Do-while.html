@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciclo Do While</title>
+</head>
+<body>
+    <h1>Loop Do While</h1>
+
+
+    <script>
+     
+     var numero = 0
+     do{
+
+        document.write(numero, '</br>')
+        numero++
+
+     }while(numero <=10)
+
+     document.write('segundo loop </br>')
+
+     var n = 0
+
+     do{
+        n += 10
+        if(n == 50) break;
+        document.write(n, '</br>')
+     }while(n <= 100)
+
+
+
+     document.write('terceiro loop </br>')
+
+     var x = 0
+
+     do{
+        x += 10
+        if(x == 50) continue;
+        document.write(x, '</br>')
+     }while(x < 100)
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outros Eventos do Javascript</title>
+
+    <style type="text/css">
+        #box{
+            background-color: black;
+            width: 400px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+
+   <h1>Eventos onclick, onbdlclick, onmouseover e onmouseout</h1>
+
+   <div id="box">
+        
+   </div>
+   <br>
+   <br>
+
+   <button type="button" id="btn">Clique</button>
+   <button type="button" id="btn2">Duplo Clique</button>
+   <button type="button" id="btn3">Passe o mouse</button>
+   <button type="button" id="btn4">Passe e tire o mouse</button>
+   
+    <script>
+
+        var btn = document.getElementById('btn')
+        var btn2 = document.getElementById('btn2')
+        var btn3 = document.getElementById('btn3')
+        var btn4 = document.getElementById('btn4')
+        var box = document.getElementById('box')
+
+        btn.onclick = function(){clicar()}
+        btn2.ondblclick = function(){clicarDuasVezes()}
+        btn3.onmouseover = function(){passar()}
+        btn4.onmouseout = function(){sair()}
+
+       function clicar(){
+           box.innerHTML = 'clicou no botão (clique)'
+           box.style.backgroundColor = 'red'
+           box.style.color = 'white'
+       }
+
+       function clicarDuasVezes(){
+           box.innerHTML = 'deu duplo clique no botão (duplo clique)'
+           box.style.backgroundColor = 'yellow'
+           box.style.color = 'black'
+       }
+
+       function passar(){
+            box.innerHTML = 'passou o mouse sobre o botão (Passe o mouse)'
+            box.style.backgroundColor = 'green'
+            box.style.color = 'white'
+            
+       }
+
+       function sair(){
+        box.innerHTML = 'tirou o mouse do botão (passe e tire mouse)'
+           box.style.backgroundColor = 'blue'
+           box.style.color = 'white'
+       }
+
+    </script>
+</body>
+</html>

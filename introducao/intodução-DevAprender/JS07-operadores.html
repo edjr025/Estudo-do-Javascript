@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores</title>
+</head>
+<body>
+    <h1>Treinamento JS</h1>
+
+    <script>
+        /*
+            operadores no javascript
+
+                -operadores matematicos
+                -operadores atribuição
+                -operadores comparação
+                -operadores logicos
+                -operadores bitwise
+
+            operadores matematicos >> +(adição) -(subtração) *(multiplicação) /(divisão) **(exponencial)
+            
+            obs: temos tbm o ++ e o -- (operadores de incremento e decremento)
+        */
+
+        let numero = 5
+        console.log(numero + numero)
+        console.log(numero - numero)
+        console.log(numero * numero)
+        console.log(numero / numero)
+        console.log(numero**5)
+
+        let idade = 18
+        console.log('incremento depois', idade++) //ele não mostra 19 aqui, vai mostrar quando imprimirmos a idade de novo
+        console.log(idade)
+
+        let valor = 18
+        console.log('incremento antes', ++valor) //aqui ja vai mostrar o 19 pois o incremento ta ants da variavel
+
+        let x = 10
+        console.log('decremento depois', x--)
+        console.log(x)
+
+        let y = 10
+        console.log('decremento antes', --y)
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <h1>Usando o map e o filter juntos, (resultado no console)</h1>
+
+    <script>
+         const arrayDeprodutos = [
+            {nome: '', preco: 23.67, desconto: 0.2},
+            {nome: '', preco: 120.99, desconto: 0.3},
+            {nome: '', preco: 3567.67, desconto: 0.5},
+            {nome: '', preco: 10.80, desconto: 0.1},
+            {nome: '', preco: 7.43, desconto: 0.05},
+            {nome: '', preco: 12355.33, desconto: 0.15}
+        ]
+
+        function getCusto(precoComDesconto){
+            return parseInt(precoComDesconto * 0.3) 
+        }
+
+        function getPrecoComDesconto(produto){
+            return produto.preco * (1 - produto.desconto)
+        }
+
+        function altoCusto(produto){
+            return produto.preco >= 1000
+        }
+
+        //Usando o map e o filter juntos
+        const resultado = arrayDeprodutos
+        .filter(altoCusto)
+        .map(getPrecoComDesconto)
+        .map(getCusto)
+        console.log(resultado)
+
+
+       
+    </script>
+</body>
+</html>

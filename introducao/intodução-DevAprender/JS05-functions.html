@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+<body>
+    <h1>Treinamento JS</h1>
+
+    <script>
+        /*
+            funções: 
+
+                nomeando uma função >>> verbo + substativo
+                ex: resetaCor
+                    alterarTamanho
+
+               funções podem ter parametros ou não:
+                    funcção sem parametro >> function alterarNome(){} 
+                    funcção com parametro >> function alterarNome(a){}  
+
+        */
+
+        let corSite = 'Azul'
+
+         //função sem parametro
+        function resetarCor(){
+            corSite = ''
+        }
+
+        console.log(corSite)
+        resetarCor()
+        console.log(corSite)
+        
+        //função com parametro
+        function inserirCor(cor){
+            corSite = cor
+        }
+
+        inserirCor('verde')
+        console.log(corSite)
+
+
+
+    </script>
+</body>
+</html>

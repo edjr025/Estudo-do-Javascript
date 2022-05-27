@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        //Função em JS é First-class object (citizens)
+        //Higher-order function
+
+        //criar de forma literal
+        function fun1(){}
+
+        //Armazenar em um variavel 
+        const fun2 = function(){}
+
+        //Armazenar em um array
+        const array = [function(a, b){return a + b}, fun1, fun2]
+        console.log(array[0](2,3))
+
+        //Armazenar em um atributo de objeto
+        const obj = {}
+        obj.falar = function () {return 'opa'}
+        console.log(obj.falar())
+
+        //passar funçaõ como parametro
+        function run(fun){
+            fun()
+        }
+        run(function (){console.log('executando......')})
+
+        //uma função pode retornr/conter uma função
+        function soma(a,b){
+            return function(c){
+                console.log(a + b + c)
+            }
+        }
+        //1 ªforma de executar a funçaõ acima
+        soma(2,3)(4)
+
+         //2 ªforma de executar a funçaõ acima
+         const cincoMais = soma(1,2)
+         cincoMais(3)
+
+         
+    </script>
+    
+</body>
+</html>

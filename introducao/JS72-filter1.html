@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter</title>
+</head>
+<body>
+    <script>
+        const produtos = [
+            {nome: 'Notebook', preco: 2499, fragil: true},
+            {nome: 'Ipad Pro', preco: 4199, fragil: true},
+            {nome: 'Copo de vidro', preco: 12.49, fragil: true},
+            {nome: 'Copo de Plastico', preco: 18.99, fragil: false},
+        ]
+
+        console.log(produtos.filter(function(p){
+           return p.fragil == false
+        }))
+
+        //produtos que são caro e frageis
+        const caro = produto => produto.preco >= 500
+        const fragil = produto => produto.fragil
+
+        console.log(produtos.filter(caro).filter(fragil))
+    </script>
+</body>
+</html>

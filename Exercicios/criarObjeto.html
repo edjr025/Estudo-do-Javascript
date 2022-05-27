@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>criar Objeto</title>
+</head>
+<body>
+    <h1>Treinamento JS</h1>
+
+    <script>
+       let endereco = {
+            rua: 'joaquina alves',
+            cidade: 'Bacu',
+            cep: '12346-987'
+
+       }
+
+       //const clonar = Object.assign({},endereco)
+       //console.log(exibirEndereco(clonar))
+
+       function exibirEndereco(endereco){
+           for(let chave in endereco){
+               console.log(chave, endereco[chave])
+           }
+       }
+
+       exibirEndereco(endereco)
+
+    
+    </script>
+</body>
+</html>

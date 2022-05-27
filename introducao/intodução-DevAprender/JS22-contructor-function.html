@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Construct Function</title>
+</head>
+<body>
+    <h1>Treinamento JS</h1>
+
+    <script>
+        // o codigo abaixo instancia uma classe com o factory function
+         function criarCelular(marca, tamanhoTela, capacidadeBateria){
+            return{
+                marca,
+                tamanhoTela,
+                capacidadeBateria,
+                ligar(){
+                    console.log('fazendo ligação ...')
+                }
+            }
+        }
+
+        //usando o Construct Function
+        function Celular(marca, tamanhoTela, capacidadeBateria){
+            this.marca = marca
+            this.tamanhoTela = tamanhoTela
+            this.capacidadeBateria = capacidadeBateria
+            this.ligar = function(){
+                console.log('ligando.......')
+            }
+        }
+
+        //criando um novo objeto com atraves da nossa função contrutora
+        const celular = new Celular('Sansung', 250, 6000)
+        console.log(celular)
+
+        /*
+            obs: tanto a factory function quanto a Construct Function fazem a mesma coisa
+            a diferença é q no contructor vc vai criar os objetos atraves do operador new
+            e na factory vc vai cria o objeto dentro da propria função, quando faz o return{
+                 marca,
+                tamanhoTela,
+            }
+        */
+
+    </script>
+</body>
+</html>

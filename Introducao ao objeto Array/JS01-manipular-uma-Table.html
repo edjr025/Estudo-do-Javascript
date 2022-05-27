@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>manipular uma Table</title>
+</head>
+<body>
+    <h1>Manipular uma Table</h1>
+
+    <table>
+        <tr>
+            <td id="c1">Celula 1</td>
+            <td id="c2">Celula 2</td>
+            <td id="c3">Celula 3</td>
+        </tr>
+    </table>
+
+    <script>
+        //colocando uma borda em uma tabela atraves do Javascript
+        var tabela = document.getElementsByTagName('table')
+        tabela[0].border = '1'
+
+        document.getElementById('c1').innerHTML = 'Nome'
+        document.getElementById('c2').innerHTML = 'Marca'
+        document.getElementById('c3').innerHTML = 'Ano'
+    </script>
+</body>
+</html>

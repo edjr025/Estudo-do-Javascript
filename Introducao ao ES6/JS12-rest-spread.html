@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest/Spread</title>
+</head>
+<body>
+    <script>
+        //rest pra juntar e spread para espalhar
+
+        //spread com objeto
+        const funcionario = {nome: 'maria', salario: 12345.99}
+        const clone = {ativo: true, ...funcionario}
+        console.log(clone)
+
+         //spread com array
+         const grupoA = ['JOão', 'Pedro', 'Ana']
+         const grupoFinal = ['Maria', 'José', ...grupoA]
+         console.log(grupoFinal)
+
+         const outroGrupo = ['Marta', 'Lucas', ...grupoFinal, 'Rafael']
+         console.log(outroGrupo)
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adcionando elemento</title>
+
+    <style>
+        .container{
+            border: 1px solid  lightgrey;
+            padding: 20px;
+            margin: 20px;
+        }
+
+        p{
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+       Dentro da DIV
+    </div>
+
+    <script>
+       let div = document.querySelector('.container') //a div vai ser a referencia
+
+       //vamos adcionar texto antes da DIV
+       div.before('AAA')
+
+       //vamos adcionar texto depois da DIV
+       div.after('BBBBBB')
+
+       //vamos adcionar texto dentro da DIV
+       div.prepend('CCCCCCC')
+
+       //vamos adcionar texto dentro da DIV  porem no fim
+       div.append('DDDDDD')
+
+       let p1 = document.createElement('p')
+       p1.innerHTML = 'paragrafo criado'
+       div.append(p1)
+    </script>
+</body>
+</html>

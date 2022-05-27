@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .p-1{
+            background-color: yellow;
+        }
+
+        .p-2{
+            background-color: green;
+        }
+
+        .espaco{
+            padding: 10px;
+        }
+
+        .p-3{
+            color: white;
+        }
+
+        .p-4{
+            font-size: 25px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+    </style>
+</head>
+<body>
+    
+    <p>Lorem ipsum dolor sit amet consectetur.</p>
+
+    <script>
+        //inserindo uma classe no elemento
+
+        /*
+            className é um propriedade que premite ler e alterar as classes do elemento
+        */
+        let p = document.querySelector('p')
+        p.className = 'p-2 espaco' //adcionou duas classes como string
+        console.log(p.className)
+
+        let classes = p.classList
+        console.log(classes)
+
+        p.classList.add('p-3')
+        p.classList.add('p-4')
+
+        p.classList.remove('espaco')
+
+        //se existe a classe espaço ele retira, se não tiver ele põe
+        p.classList.toggle('espaco')
+
+        if(p.classList.contains('espaco')){
+            console.log('tem a classe espaco')
+        }else{
+            console.log('NÃO tem a classe espaco')
+        }
+    </script>
+</body>
+</html>

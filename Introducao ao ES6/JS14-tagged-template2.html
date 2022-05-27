@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tagged template</title>
+</head>
+<body>
+    
+    <script>
+       function real(partes, ...valores){
+            const resultado = []
+            valores.forEach((valor,indice) => {
+                valor = isNaN(valor) ? valor : `R$${valor.toFixed(2)}`
+                resultado.push(partes[indice], valor)
+            })
+            return resultado.join('')
+       }
+       const preco = 29.9
+       const precoParcela = 11
+       console.log(real `1  de ${preco} ou 3x de ${precoParcela}`)
+    </script>
+</body>
+</html>

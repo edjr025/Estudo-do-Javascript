@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retorno de funções</title>
+</head>
+<body>
+    <script>
+        /*
+            As funções pode retornar qualquer tipo de dado no javascript
+            os retornos só podem ser de um tipo em cada função
+            EX: não pode ter um return 'texto' e return 1  dentro da mesma função
+        */
+
+        function name(params){
+            return 'texto'
+        }
+
+        function numero(){
+            return 1
+        }
+
+        function numero2(){
+            return undefined
+        }
+
+        function numero3(){
+            return null
+        }
+
+
+        //função q rotorna um array
+        function arr(){
+            return [1,2,3,4,5]
+        }
+
+        console.log(arr()[2])
+
+        function calculo(){
+           let soma = arr()[1] + arr()[3]
+           return soma
+        }
+
+        console.log(calculo())
+
+        //função que retorna um objeto
+        function obj(){
+            return{
+                peso:90,
+                idade: 30,
+                nome: 'Junior'
+            }
+        }
+
+        console.log(obj().nome)
+
+
+
+
+    </script>
+</body>
+</html>

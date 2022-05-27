@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arredondar com Round</title>
+</head>
+<body>
+    <h1>Arredondar com Round e determinar valores com Max e Min Valor de Pi</h1>
+
+    <p id="msg"></p>
+    <p id="newmsg"></p>
+    <p id="ms3"></p>
+    <p id="msg2"></p>
+    <p id="msg3"></p>
+
+    <script>
+        var valor = 5.39
+        var inteiro = 5.74
+
+        //arredondando com o round
+        document.getElementById('msg').innerHTML = Math.round(inteiro)
+        document.getElementById('newmsg').innerHTML = Math.round(valor)
+
+        //definido o minimo
+        document.getElementById('ms3').innerHTML = Math.min(5,1,30,0,87,-3)
+        
+         //definido o maximo
+         document.getElementById('msg2').innerHTML = Math.max(5,1,30,0,87,-3)
+
+         //definindo PI
+         document.getElementById('msg3').innerHTML = Math.PI
+    </script>
+</body>
+</html>

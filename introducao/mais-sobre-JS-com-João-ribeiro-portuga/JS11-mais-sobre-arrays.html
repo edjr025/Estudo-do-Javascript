@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+<body>
+    <script>
+        // array de objetos
+        let clientes = [
+            {nome: 'joao', idade: 48},
+            {nome: 'ana', idade: 31},
+            {nome: 'carlos', idade: 27}
+        ]
+
+        console.log(clientes[1].nome)
+
+        //percorrendo array com foreach
+        clientes.forEach(cliente =>{
+            console.log(`O(a) cliente ${cliente.nome} tem ${cliente.idade} anos de idade`)
+        })
+
+
+        //percorrendo array com for tradicional
+        for(let i = 0; i < clientes.length; i++){
+            console.log(`cliente ${clientes[i].nome} tem ${clientes[i].idade} anos`)
+        }
+    </script>
+</body>
+</html>

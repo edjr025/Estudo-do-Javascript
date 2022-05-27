@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notas de alunos</title>
+</head>
+<body>
+    <script>
+        let qtdAlunos = parseInt(prompt('Quantos Alunos quer lançar'))
+        let n1,n2,n3,n4, media
+        for(let i = 0; i < qtdAlunos; i++){
+        
+            let nome = prompt('Informe o nome do aluno:')
+            n1 = parseInt(prompt('infome a 1ª nota do ' + nome)) 
+            n2 = parseInt(prompt('infome a 2ª nota do ' + nome))
+            n3 = parseInt(prompt('infome a 3ª nota do ' + nome))
+            n4 = parseInt(prompt('infome a 4ª nota do ' + nome))
+
+            
+           parseFloat(media = (n1+n2+n3+n4) / 4) 
+            console.log('Media do(a) ',nome,  'é: ',  media)  
+
+            if(media >= 7){
+                console.log(nome, ' Aprovado(a)')
+            }else{
+                console.log(nome, ' Reprovado(a)')
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parametro padrão</title>
+</head>
+<body>
+    <h1>Parametro padrão</h1>
+
+    <p id="msg"></p>
+    <p id="msg2"></p>
+
+    <button onclick="teste()">teste</button>
+    <button onclick="teste2()">teste2</button>
+    <br>
+    <br>
+
+    <script>
+       
+        function teste(){
+            document.getElementById('msg').innerHTML = adicao(10)
+        }
+
+        function teste2(){
+            //aqui ele vai ignorar o y=100 ja que passei o parametro 30
+            document.getElementById('msg2').innerHTML = adicao(10, 30)
+        }
+
+        function adicao(x, y=100){
+            return x + y
+        }
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event com parametro</title>
+    <style>
+        .paragrafo{
+            border: 1px solid red;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Evento com parametros</h1>
+
+    <!--escutando evento do javascript dentro do onclick --- não é muito usado -->
+    <button type="button" onclick="this.innerHTML = 'ola mundo'">Clicar</button>
+
+    <button onclick="alterar(this)">Botão 1</button>
+    <button onclick="alterar(this)">Botão 2</button>
+
+    <button type="button" onclick="apresentarData()">DATA</button>
+    <!--fazendo o evento click nesse botão sem a função onclick-->
+    <button id="botao" type="button">ANO</button>
+    <p id="info"></p>
+    <p id="msg"></p>
+
+    <p class="paragrafo" onmouseover="mouseOver(this)" onmouseout="onmouseOut(this)" onclick="onClique(this)">texto 1</p>
+    <p class="paragrafo" onmouseover="mouseOver(this)" onmouseout="onmouseOut(this)" onclick="onClique(this)">Texto 2</p>
+
+
+    <script>
+
+        //criando uma função q será usada por mais de uma elemento HTML
+        function alterar(e){
+            e.innerHTML = '--'
+        }
+
+        function apresentarData(){
+            data = new Date()
+            document.getElementById('info').innerHTML = data
+        }
+
+        //chamado a função mostarAno
+        document.getElementById('botao').onclick = mostrarAno
+
+        function mostrarAno(){
+            data = new Date()
+            document.getElementById('msg').innerHTML = data.getFullYear()
+        }
+
+
+        //funções para exemplificar comportamento dos evento(usando o parametro (e) como novidade)
+        function mouseOver(e){
+            e.style.backgroundColor = 'green'
+        }
+
+        function onmouseOut(e){
+            e.style.backgroundColor = 'yellow'
+        }
+
+        function onClique(e){
+            e.style.backgroundColor = 'red'
+            e.style.color = 'white'
+            e.style.fontSize = '25px'
+        }
+    </script>
+</body>
+</html>

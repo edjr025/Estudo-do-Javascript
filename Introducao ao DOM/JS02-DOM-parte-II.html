@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM parte 2</title>
+</head>
+<body>
+    <h1>Intrdução ao DOM Parte 2</h1>
+
+    <p id="texto"></p>
+
+    <div name = 'divi'></div>
+    <div></div>
+    <div name = 'divi'></div>
+    <div></div>
+    <div name = 'divi'></div>
+    <div></div>
+    <div></div>
+
+    <p></p>
+    <p name = 'paragrafo'></p>
+    <p></p>
+
+    <span name="spann"></span>
+    <span name="spann"></span>
+    <span name="spann"></span>
+    <span name="spann"></span>
+
+    <script>
+       var nome1 = document.getElementsByName('divi')
+       nome1[2].innerHTML = 'teste'
+       
+       var p = document.getElementsByName('paragrafo')
+       p[0].innerHTML = 'teste de p'
+
+       var spans = document.getElementsByName('spann')
+       for(i = 0; i < spans.length ; i++){
+            spans[i].innerHTML = 'texto alterado no span ' + i + '</br>'
+       }
+       
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typeof e introdução a Json</title>
+</head>
+<body>
+    <script>
+        (function readJS(win, doc){
+            'use strict'
+
+            let tipo = null
+            console.log(typeof tipo) // null retorna object, isso sera corrigido no futuro pois nulo deve retornar null
+
+            let arr = ['a', 0, 1, 'Junior', {'age': 18}, null]
+            for(let i = 0; i < arr.length; i++){
+                if(typeof arr[i] === 'object'){
+                    console.log(arr[i]) //mostrou o null devido ao problema com o a versão do ES6 o ocrreto seria mostrar só o {age:18}
+                }
+            }
+            console.log(Array.isArray(arr))
+
+            let data = {
+               car: {
+                   year: 2018,
+                   color: 'black',
+                   arr: [0,1,2,3]
+               }
+           } 
+           console.log(data)
+           console.log(JSON.stringify(data)) //transforma json em formato de string
+
+           let data2 = '{"name": "Junior", "age": "28"}'
+           console.log(JSON.parse(data2)) //transforma  uma string para json
+
+        })(window, document);
+
+       
+          
+       
+    </script>
+</body>
+</html>

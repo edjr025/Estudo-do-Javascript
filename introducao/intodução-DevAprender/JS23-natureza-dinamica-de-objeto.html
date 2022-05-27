@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natureza dinamica de objetos</title>
+</head>
+<body>
+    <h1>Treinamento JS</h1>
+
+    <script>
+        const mouse = {
+            cor: 'red',
+            marca: 'dazz'
+        }
+
+        console.log(mouse)
+
+        //inserindo propriedade e metodos apos a criação do objeto, mostrando a natureza dinamica
+        mouse.velocidade = 5000
+        mouse.preco = 25.50
+        mouse.trocarDPI = function(){
+            console.log('mudando DPI')
+        }
+        mouse.tamanho = 25
+
+        //deletando propriedade dp objeto mouse
+        delete mouse.preco
+        delete mouse.marca
+    </script>
+</body>
+</html>

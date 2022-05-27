@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> FUNÇÕES RELACIONADAS COM ATRIBUTOS</title>
+
+    <style>
+        .noticia{
+            font-family: Arial, Helvetica, sans-serif;
+            border: 1px solid rgb(150, 150, 150);
+            background-color: rgb(240, 240, 240);
+            border-radius: 10px;
+            box-shadow: 2px 2px 6px rgba(0, 0, 0, .5);
+            padding: 20px;
+            margin: 50px;
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+   
+    <div class="noticia">
+        <h1>Titulo da noticia</h1>
+        <h3 id="sumario">Sumario da noticia</h3>
+        <img src="img1.webp" width="400" alt="imagem">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel omnis, eos doloribus nihil
+        <br> porro tenetur facilis et voluptate nulla voluptates, corrupti maiores ipsa vitae<br>
+         praesentium alias ad id blanditiis debitis?</p>
+    </div>
+
+    <script>
+        let elemento = document.querySelector('h3')
+
+        //hasAttribute
+        if(elemento.hasAttribute('id')){
+            console.log('tem o atributo')
+        }
+
+         //getAttribute
+         console.log(elemento.getAttribute('id'))
+
+         //setAttribute
+         elemento.setAttribute('title','meu titulo')//quando colocar o mouse sobre o h3 vai mostrar o atributo
+
+         //removeAttribute
+         let imagem = document.querySelector('img')
+         imagem.removeAttribute('src')
+
+         //attributes
+         console.log(imagem.attributes[1])
+         console.log(imagem.attributes['width'])
+         console.log(imagem.attributes['src']) //vai trazer undefined ja que removemos o atributo src
+    </script>
+</body>
+</html>

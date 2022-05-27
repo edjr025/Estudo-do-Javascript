@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes parte 2</title>
+</head>
+<body>
+    <h1>Classes parte II</h1>
+
+    <script>
+        class Veiculo{
+
+            constructor(tipo){
+                this.tipo = tipo
+            }
+
+            identificar(){
+                return `Eu sou um ${this.tipo}`
+            }
+        }
+
+        //conceito de herança
+        class Automovel extends Veiculo{
+            passarMacha(){
+                return 'estou na 3ª marcha'
+            }
+        }
+
+        class Aviao extends Veiculo{
+            definirAltitude(valor){
+                return `A altitude desse avião é de ${valor} pes`
+            }
+        }
+
+
+        let BMW = new Automovel('carro')
+        //o objeto BMW usa o metodo identificar da classe veiculo q é  a classe mãe
+        document.write(BMW.identificar() + '</br>')
+        //o objeto BMW usa o metodo passarMacha da classe automaovel q é a sua classe 
+        document.write(BMW.passarMacha() + '</br>')
+
+        let papatango = new Aviao('avião')
+        //o objeto papatango usa o metodo identificar da classe veiculo q é  a classe mãe
+        document.write(papatango.identificar() + '</br>')
+        //o objeto papatango usa o metodo definirAltitude da classe aviao q é a sua classe 
+        document.write(papatango.definirAltitude(7500) + '</br>')
+
+
+        // let BMW = new Veiculo('carro')
+        // document.write(BMW.identificar() + '</br>')
+
+        // let Papatango = new Veiculo('avião')
+        // document.write(Papatango.identificar() + '</br>')
+    </script>
+</body>
+</html>

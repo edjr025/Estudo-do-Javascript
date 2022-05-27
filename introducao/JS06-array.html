@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+<body>
+
+    <h1>Arrays</h1>
+
+    <p id="texto"></p>
+    <button onclick="mostrar()">Mostrar nome</button>
+    <br>
+    <br>
+    <p id="matriz"></p>
+    <script>
+        //definindo o array e a quantidade de itens que ele vai ter
+        var meuArray = new Array(4)
+
+        //definindo os valores do array a partir da posição 0
+        meuArray[0] = 10
+        meuArray[1] = 22
+        meuArray[2] = 37
+        meuArray[3] = 89
+
+        //mostrando o array com os seus valores
+        document.write('meu array completo [', meuArray, ']')
+        document.write('</br>')
+
+        //mostrando um valor do array atraves do seu indice
+        document.write('a posição 1 do array guarda o valor ', meuArray[1])
+        document.write('</br>')
+
+        //definindo o array sem quantidade de items definidas
+        var newArray = new Array()
+
+        //colocando valores no newArray em quaisquer posições
+        newArray[2] = 100
+        newArray[7] = 254
+        newArray[15] = 350
+
+        //mostrando os valores do meu newArray na tela
+        document.write('o meu newArray na posição 15 guarda ', newArray[15])
+        document.write('</br>')
+
+        //colocando uma posição que não foi definida >> ele mostrara undefined pois não existe valor na posição 0
+        document.write('o meu newArray na posição 0 guarda ', newArray[0])
+        document.write('</br>')
+
+        //array com valores pre-definidos
+        var preArray = new Array(2,3,7,11)
+
+        //mostrando o array com os seus valores pre-definidos
+        document.write('meu array com os valores pre-definidos [', preArray, ']')
+        document.write('</br>')
+
+        //nova forma de criar array, nas novas versões do JS || forma mais usada
+        var novoArray = [9, 16, 28, 77]
+
+        //mostrando os valores do novoArray  sem instancia-lo com o new Array()
+        document.write('O novo array sem usar o operador NEW  [', novoArray, ']')
+        document.write('</br>')
+
+        //teste pratico  obs: trocando a posição 2 de true pra false temos outro resultado no teste
+        arrayTeste = ['Junior', 27, true]
+
+        function mostrar(){
+            var texto = document.getElementById('texto')
+            if(arrayTeste[2]){
+                texto.innerHTML = arrayTeste[0]
+            }else{
+                texto.innerHTML = 'o nome não pode ser mostrado pois a posição 2 do array ta false'
+            }
+        }
+
+        //array bidimensional
+        var boletim = [[8,7,9,3], [4,5,8,6]]
+        console.log(boletim)
+        console.table(boletim)
+
+    </script>
+</body>
+</html>

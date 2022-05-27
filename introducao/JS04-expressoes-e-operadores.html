@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expressões e Operadores</title>
+</head>
+<body>
+    <h1>Expressões e Operadores</h1>
+
+
+    <script>
+       var a = 10
+       var b = 5
+
+       /*
+            Os operadores matematicos são:
+                (+) somar
+                (-) subtrair
+                (*) multiplicar
+                (/) dividir
+                (%) modulo  >> resto da divisão
+                (++) incremento || incrementar de 1 em 1
+                (--) decremento || decrementar de 1 em 1
+                (+=) incrementando com um valor qualquer
+                (-=) decrementando com um valor qualquer
+                
+            o sinal de + na programação serve para somar valores e para concater string com string ou
+            numero com string
+       */
+       var soma = a + b
+       document.write('a soma é: ', soma)
+       document.write('</br>')
+
+       var subtracao = a - b
+       document.write('a subtração é: ', subtracao)
+       document.write('</br>')
+
+       var multiplicacao = a * b
+       document.write('a multiplicacao é: ', multiplicacao)
+       document.write('</br>')
+
+       var divisao = a / b
+       document.write('a divisao é: ', divisao)
+       document.write('</br>')
+
+       var modulo = a % b
+       document.write('o modulo é: ', modulo)
+       document.write('</br>')
+
+       var x = 10
+       x++
+       document.write('o valor com o incremento é: ',x)
+       document.write('</br>')
+       var y = 10
+       y--
+       document.write('o valor com o decremento é: ',y)
+       document.write('</br>')
+
+       var k = 10
+       k += 10
+       document.write('apos o += o valor é: ', k)
+       document.write('</br>')
+
+       var z = 15
+       z -= 8
+       document.write('apos o -= o valor é: ', z)
+       document.write('</br>')
+
+       //expressões matematicas >> ordem de precedência
+       var p1 = 2
+       var p2 = 3
+       var p3 = 4
+
+       var resultado = p1 + p2 * p3
+       document.write('o resultado é: ', resultado)
+       document.write('</br>')
+
+       var resultado2 = (p1 + p2) * p3
+       document.write('o segundo resultado é: ', resultado2)
+       document.write('</br>')
+
+
+       //incrementando ou decrementando com o sinal antes da variavel  ex: --var ++var
+       var num1 = 10
+       document.write('o numero é: ', --num1)
+       
+
+
+    </script>
+</body>
+</html>

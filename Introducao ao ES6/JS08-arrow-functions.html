@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Functions</title>
+</head>
+<body>
+    
+    <h1>Arrow Functions</h1>
+
+    <p id="msg"></p>
+    <p id="msg1"></p>
+
+    <script>
+        const array = [2,4,6]
+        document.getElementById('msg').innerHTML = array
+        //dobrando os valores do arry com o map e arrow function
+
+        const dobro = array.map(valor => valor * 2)
+        document.getElementById('msg1').innerHTML = dobro
+
+
+
+        const func1 = function(param1){
+
+        } //função anonima feita da forma antiga
+
+        //usando arrow function
+        const func11 = (param1) => {
+
+        }
+
+        const func2 = function(valor){
+            return valor * 2
+        } //forma antiga
+
+        //forma nova > com arrow function
+        const func22 = (valor) => valor * 2
+
+        /*
+            OBS: o this dentro de uma função comun refencia apenas a função na qual ele esta
+            já o this dentro de uma arrow function ele tem a referencia global
+
+            exemplo do uso do this na arrow function abaixo:
+            OBS2: existe um componente react criado abaixo apenas para exemplifica o uso do this
+            esse codigo abaixo aqui não funciona 
+        */
+
+        // loaddata(){
+
+        // }
+
+        // render(){
+        //     return(
+        //         <button onclick={() => {this.loaddata()}} //consigo referencia o loadData função externa ao escopo de função aqui pq o arrow function permite
+        //     )
+        // }
+
+
+
+
+        //outro exemplo
+        class Tabuada{
+            constructor(numero, valores){
+                this.numero = numero
+                this.valores = valores
+            }
+
+            get tabela(){
+            return this.valores.map(valor =>{
+                return {
+                    numero: this.numero,
+                    valor: valor,
+                    resultado: this.numero * valor
+                 }
+                });
+            }
+        }
+
+        let x = new Tabuada(4,[1,2,3])
+        console.table(x.tabela)
+
+        //atribuir a variavel olaMundo a arrow function
+        const olaMundo = () => document.write('ola mundo vindo da arrow functions')
+        //chamei a função
+        olaMundo()
+
+
+        //armazenando uma função arrow em uma variavel
+        const soma = (a,b) =>{
+            return a + b
+        }
+
+        console.log(soma(3,4))
+
+        //retorno implicito
+        const subtracao = (a,b) => a - b
+        console.log(subtracao(4,3))
+
+        //quando a função tem um unico parametro
+        const imprimir = a => console.log(a)
+        imprimir('legal')
+
+       
+
+        dobrar = a => 2 * a
+        console.log(dobrar(5))
+    </script>
+</body>
+</html>

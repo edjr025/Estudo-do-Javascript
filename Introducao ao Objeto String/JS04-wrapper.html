@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Método HTML Wrappe</title>
+</head>
+<body>
+    <h1>  Strings Método HTML Wrappe</h1>
+
+    <p id="msg"></p>
+    <p id="msg2"></p>
+    <p id="msg3"></p>
+    <p id="msg4"></p>
+    <p id="msg5"></p>
+    <p id="msg6"></p>
+    <p id="msg7"></p>
+    <p id="msg8"></p>
+    <p id="msg9"></p>
+
+    <script>
+       var frase = 'Agora estou aprendendo Javascript'
+
+        //colocando a frase para negrito
+       document.getElementById('msg').innerHTML = frase.bold()
+       
+        //colocando a frase com as letras maiores
+       document.getElementById('msg2').innerHTML = frase.big()
+
+        //colocando a frase com a cor da fonte
+        document.getElementById('msg3').innerHTML = frase.fontcolor('red')
+
+        //colocando a fonte 
+        document.getElementById('msg4').innerHTML = frase.fontsize('25px')
+
+        //colocando a frase em italico 
+        document.getElementById('msg5').innerHTML = frase.italics()
+
+         //colocando a frase pequena
+         document.getElementById('msg6').innerHTML = frase.small()
+
+        //colocando a frase em italico 
+        document.getElementById('msg7').innerHTML = frase.strike()
+
+        //colocando expoente
+        document.getElementById('msg8').innerHTML = 'Area = 200 m' + '2'.sup()
+
+        //
+        document.getElementById('msg9').innerHTML = 'A formula da Agua é: H' + '2'.sub() + 'O'
+
+
+
+
+       
+    </script>
+</body>
+</html>

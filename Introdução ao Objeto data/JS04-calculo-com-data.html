@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo com Data</title>
+</head>
+<body>
+    <h1>Calculando a idade de um indivíduo recorrendo a Date em JavaScript</h1>
+
+    <p id="msg"></p>
+    <p id="nasci"></p>
+
+    <script>
+        var data_atual = new Date()
+
+        var dataNascimento = new Date(1994, 2, 25)
+
+        //subtraimos os anos
+        var anos = data_atual.getFullYear() - dataNascimento.getFullYear()
+
+        //analise dos meses
+        if(data_atual.getMonth() != dataNascimento.getMonth()){
+            //verificar as diferenças nos meses
+            if(data_atual.getMonth() < dataNascimento.getMonth()){
+
+                anos--
+            }
+        } else{
+            //analisar o dia do mês
+            if(data_atual.getDay() < dataNascimento.getDay()){
+                anos--
+            }
+        }
+
+        document.getElementById('msg').innerHTML = 'tenho ' + anos + ' anos'
+    </script>
+</body>
+</html>

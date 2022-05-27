@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notação literal</title>
+</head>
+<body>
+    
+    <script>
+        const a = 1
+        const b = 2
+        const c = 3
+
+        //forma antiga quando o valor e o nome do atributo são iguais
+        const obj = {a:a, b:b, c:c}
+        console.log(obj)
+
+        //forma nova com o ES6
+        const obj1 = {a, b, c}
+        console.log(obj1)
+
+        const nomeAttr = 'nota'
+        const valorAttr = 7.87
+
+        //forma antiga
+        const obj2 = {}
+        obj2[nomeAttr] = valorAttr
+        console.log(obj2)
+
+        //forma nova
+        const obj3 = {[nomeAttr]:valorAttr}
+        console.log(obj3)
+
+        const obj4 = {
+            //jeito antigo de criar uma funçaõ dentro do objeto
+            funcao1: function(){
+                //.....
+            },
+
+            //jeito novo
+            funcao2(){
+                //jeito novo de declarar funçaõ dentro do objeto
+            }
+        }
+        console.log(obj4)
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos parte II</title>
+
+    <style type="text/css">
+        #box{
+            background-color: antiquewhite;
+            width: 200px;
+            height: 80px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Eventos  onmousedown e onmouseup</h1>
+
+    <div id="box">
+
+    </div>
+
+    <button type="button" id="btn">Pressione e Solte</button>
+    
+    <script>
+
+       var btn = document.getElementById('btn')
+       var box = document.getElementById('box')
+
+       btn.onmousedown = function(){pressionar()}
+       btn.onmouseup = function(){soltar()}
+
+       function pressionar(){
+            box.innerHTML = 'pressionou o botão do mouse'
+       }
+
+       function soltar(){
+           box.innerHTML = 'soltou o botão do mouse'
+       }
+
+    </script>
+</body>
+</html>

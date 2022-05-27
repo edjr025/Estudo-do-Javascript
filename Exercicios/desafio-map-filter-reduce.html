@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio</title>
+</head>
+<body>
+    <script>
+
+        /*
+            o desafio era:
+                pegar o array de objetos abaixo aplica um filtro e tirar os produtos com qtd = 0
+                depois teria q multiplica as qtde pelos preços dos produtos correspondentes
+                no final teria q fazer a soma do resultado dessa multiplicações
+                Desafio Leonardo
+        */
+        const carrinho = [
+            {nome: 'Caneta', qtde: 10, preco: 7.99},
+            {nome: 'Impressora', qtde: 0, preco: 649.50},
+            {nome: 'Caderno', qtde: 4, preco: 27.10},
+            {nome: 'Lapis', qtde: 3, preco: 5.82},
+            {nome: 'Tesoura', qtde: 2, preco: 19.20},
+        ]
+
+        //eu poderia passar essa função abaixo para a minha função map e daria certo tbm
+        // function total(multi){
+        //     return multi.qtde * multi.preco
+        // }
+
+        const resposta = carrinho.filter(produto => produto.qtde != 0)
+        .map((multi) =>  {
+            return multi.qtde * multi.preco
+           
+        }).reduce((anter,atual) => {
+            return anter + atual
+        })
+        console.log(resposta.toFixed(2))
+    </script>
+</body>
+</html>

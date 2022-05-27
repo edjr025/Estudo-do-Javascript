@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>herança</title>
+</head>
+<body>
+    <script>
+        function Aula(nome, videoID){
+            this.nome = nome
+            this.videoID = videoID
+        }
+
+        const aula1 = new Aula('Bem vindo', 1213)
+        const aula2 = new Aula('ate breve', 457)
+        console.log(aula1, aula2)
+
+        //simulando o new
+        function novo(f, ...params){
+            const obj = {}
+            obj.__proto__ = f.prototype
+            f.apply(obj,params)
+            return obj
+        }
+        const aula3 = novo(Aula,'continuação', 123)  // esse novo subtitui o NEW
+        const aula4 = novo(Aula,'e ai ta ligado?', 321)
+        console.log(aula3,aula4)
+      
+    </script>
+</body>
+</html>

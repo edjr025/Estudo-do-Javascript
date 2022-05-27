@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Eventos a elementos do HTML atraves do Javascript</title>
+</head>
+<body>
+
+   <h1>Adicionar Eventos a elementos do HTML atraves do Javascript</h1>
+   <h2>Eventos usados: onclick - onmouseover - onmouseout</h2>
+
+   <button type="button" id="botao">Clicar</button>
+   <button type="button" id="btn">Varios Eventos</button>
+
+   <h4 id="text"></h4>
+    
+    <script>
+
+        //o evento é chamado dentro do script ao inves de colocar no HTML
+       document.getElementById('botao').onclick = function(){mostrarTexto()}
+
+       var botao = document.getElementById('btn')
+       var texto = document.getElementById('text')
+
+       botao.onclick = function(){clicar()}
+       botao.onmouseover = function(){passar()}
+       botao.onmouseout = function(){sair()}
+
+       function mostrarTexto(){
+           document.write('clicou no botão')
+       }
+
+       function clicar(){
+           texto.innerHTML = 'clicou no botão'
+       }
+
+       function passar(){
+            texto.innerHTML = 'passou o mouse sobre o botão'
+            
+       }
+
+       function sair(){
+            texto.innerHTML = 'o mouse saiu do botão'
+       }
+
+    </script>
+</body>
+</html>

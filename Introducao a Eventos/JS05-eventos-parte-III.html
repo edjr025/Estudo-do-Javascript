@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos parte III</title>
+
+</head>
+<body onload="carregar()">
+
+    <h1>Eventos  onload e onunload</h1>
+
+    <p id="texto"></p>
+
+
+    <script>
+
+        //ao carregar a pagina o conteudo sera apresentado atraves da >>> onload="carregar()" no body
+        function carregar(){
+            document.getElementById('texto').innerHTML = 'Pagina Carregada'
+        }
+
+        //ao fechar a pagina ou recarrega-la ira mostrar esse alerta (não funciona em todos browses)
+        function finalizar(){
+            alert('vai fechar a pagina')
+        }
+    
+    </script>
+</body>
+</html>

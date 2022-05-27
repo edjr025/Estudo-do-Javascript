@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resumo DOM</title>
+</head>
+<body>
+    <h1>Resumo DOM Rocketseat</h1>
+    <p id="msg">meu 1º paragrafo</p>
+    <p id="msg1">mudou a cor de fundo</p>
+    <p id="msg2"></p>
+    <p id="msg3"></p>
+    <div class="parent">
+    <p id="msg4"></p>
+    <p id="msg5"></p>
+    <p id="msg6"></p>
+    </div>
+    <p id="msg7"></p>
+    <div class="classes"></div>
+    <div class="classes"></div>
+    <a href="http://google.com"></a>
+    <a href="http://g1.globo.com"></a>
+    <a href="http://ge.globo.com"></a>
+    <a href="http://uol.com"></a>
+    <a href="https://br.yahoo.com/"></a>
+
+    <script>
+        console.log(document.location) 
+        console.log(document.location.href)
+        console.log( document.title) 
+        console.dir(document.head)
+        console.log(document.body)
+        console.log(document.links)
+        console.log(document.forms)
+        console.log(document.images)
+
+        //BUSCANDO E SELECIONANDO ELEMENTOS
+        console.log(document.getElementById('msg'))
+        console.log(document.getElementsByClassName('classes'))
+        console.log(document.getElementsByTagName('p'))
+        console.log(document.querySelector('#msg'))
+        console.log(document.querySelectorAll('.classes'))
+
+        //usando o querySelectorAll você pode usar foreach para selecionar um html collections
+        //ja usando o getElementsByClassName não é possivel fazer isso
+
+        let as = document.querySelectorAll('a')
+        as.forEach(a => console.log(a))
+
+        //MANIPULAR CONTEUDO
+        let p = document.querySelector('#msg')
+        console.log(p.textContent)
+        p.innerHTML = 'mudando o texto'
+        console.log(p.textContent)
+
+        let d = document.querySelectorAll('.classes')
+        d.innerHTML = '<h1>meu titulo  dentro da div</h1>'
+        console.log(d.innerHTML)
+        
+        let p2 = document.querySelector('#msg1')
+        p2.style.backgroundColor = 'red'
+
+       let parente = document.querySelector('.parent')
+       console.log(parente.parentNode)
+       console.log(parente.children)
+       console.log(parente.parentElement) //parentNode e parentElement são as mesmas coisas
+       console.log(parente.childNodes)
+       console.log(parente.firstChild)
+       //console.log(parente.remove())
+       console.log(parente.children[2])
+
+       console.log(parente.nextSibling)//elementos irmão proximo
+       console.log(parente.previousSibling) //elementos irmão anterior
+
+       let elementoNovo = document.createElement('iframe')
+       elementoNovo.src = 'https://www.youtube.com/watch?v=pqqAIakUecI'
+       elementoNovo.width = '100px'
+       elementoNovo.height = '100px'
+
+       //document.body.append(elementoNovo)
+       //document.body.prepend(elementoNovo)
+
+       //olhar o insertBefore e o insertAfter
+
+       console.log(p.getAttribute('id'))
+       //console.log(d.getAttribute("class"))
+
+       p.setAttribute('class','paragrafo')
+       console.log(p)
+
+
+
+       
+
+        
+    </script>
+</body>
+</html>

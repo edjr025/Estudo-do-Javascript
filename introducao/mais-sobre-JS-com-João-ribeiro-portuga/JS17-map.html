@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>map</title>
+</head>
+<body>
+    <script>
+        let valores = new Map();
+
+        valores.set('nome', 'Jose')
+        valores.set('idade',33)
+        valores.set(1,'11111')
+        valores.set(2,'2222')
+        valores.set(3, '3333')
+        console.table(valores)
+        console.log('- '.repeat(50))
+
+        console.log(valores.get(1))
+        console.log(valores.get('idade'))
+
+        console.log('- '.repeat(50))
+
+        if(valores.has('apelido')){
+            //valores tm uma chave chamada apelido?
+            console.log('tem apelido')
+        }else{
+            console.log('não tem apelido')
+        }
+
+        console.log(valores.size)
+
+        //interação no map pegando as chaves
+        for(key of valores.keys()){
+            console.log(key)
+        }
+        console.log('- '.repeat(50))
+        //interação no map pegando os valores
+        for(key of valores.values()){
+            console.log(key)
+        }
+
+        console.log('- '.repeat(50))
+         //interação no map pegando as chaves e os valores
+        valores.forEach((valor, key) =>{
+            console.log(`a chave é ${key} e o valor é: ${valor}`)
+        })
+
+        console.clear()
+
+        let valores1 = new Map([
+            ['nome','joao'],
+            ['idade', 33],
+            ['peso', 98.75],
+        ])
+
+        console.table(valores1)
+    </script>
+</body>
+</html>

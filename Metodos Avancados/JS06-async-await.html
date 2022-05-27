@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>async await</title>
+</head>
+<body>
+    
+    <script>
+
+        // async function main(){
+        //     if(await getResultado(5) > 10){
+        //         console.log('o valor q retornou é maior q 10')
+        //     }
+        // }
+
+        // main()
+
+        // //função que retorna uma promisse
+        // function getResultado(parametro){
+        //     return new Promise((resolve,reject) =>{
+        //         setTimeout(() =>{
+        //             resolve(parametro * 2.5)
+        //         },3000)
+        //     })
+        // }
+
+
+        //exemplo com Mateus Batisit
+
+        //sintaxe
+
+        function primeiraFuncao(){
+            return new Promise((resolve) =>{
+                setTimeout(() =>{
+                    console.log('esperou isso aqui')
+                    resolve()
+                },3000)
+            })
+        }
+
+        async function segundaFuncao(){
+            console.log('iniciou')
+
+            await primeiraFuncao()
+
+            console.log('terminou')
+        }
+
+        segundaFuncao()
+    </script>
+</body>
+</html>

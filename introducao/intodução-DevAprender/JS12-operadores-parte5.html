@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores parte 3</title>
+</head>
+<body>
+    <h1>Treinamento JS</h1>
+
+    <script>
+        /*
+            operadores no javascript
+
+                -operadores matematicos
+                -operadores atribuição
+                -operadores comparação
+                -operadores logicos
+                -operadores bitwise
+
+            operadores matematicos >> +(adição) -(subtração) *(multiplicação) /(divisão) **(exponencial)
+            
+            obs: temos tbm o ++ e o -- (operadores de incremento e decremento)
+        */
+
+        /*
+            operadores de comparação
+                > maior que
+                < menor que
+                >= maior ou igual que
+                <= menos ou igual que
+
+            OBS: a resposta é  um booleano  
+            
+            Truthy e falsy
+                falsy
+                    - falsy
+                    -undefined
+                    -null
+                    -0
+                    -false
+                    - '' (string vazia)
+                    - NaN (not a number)
+                truthy
+                    - truthy
+                    - numero diferente de 0
+                    - 'nome'
+                    - array
+                    - objeto
+                    entre outros
+
+        */
+
+        //conceito de truth e falsy
+        console.log(false || 'junior')
+        console.log(true || 'maria')
+        console.log(false && 'pedro')
+        console.log(true && 'joão')
+        console.log(5 && 'joana')
+        console.log('marta' || 10)
+        console.log(false && 1)
+        console.log(false || 1)
+
+        let corPersonalizada = 'vermelho'  //se deixar vazio aqui o resultado sera azul(cor padrão)
+        let corPadrao = 'azul'
+
+        let corPerfil = corPersonalizada || corPadrao
+        console.log(corPerfil)
+
+        
+
+
+    </script>
+</body>
+</html>

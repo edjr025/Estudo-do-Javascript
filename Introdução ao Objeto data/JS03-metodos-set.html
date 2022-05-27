@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodos SET</title>
+</head>
+<body>
+    <h1>Metodos SET</h1>
+
+    <p id="msg"></p>
+    <p id="nasci"></p>
+
+    <script>
+        var data = new Date()
+
+        //setando o ano para 2025
+        data.setFullYear(2025)
+
+        document.getElementById('msg').innerHTML = data.getFullYear()
+    </script>
+</body>
+</html>

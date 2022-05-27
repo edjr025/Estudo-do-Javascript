@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acessando Atributos 3</title>
+</head>
+<body>
+    <div>
+        <label for="compras">Compras</label>
+        <ul id="compras" destino='escritorio' data-urgencia="5"> 
+            <li>Café</li>
+            <li>Água</li>
+            <li>Copo Descartavel</li>
+        </ul>
+    </div>
+
+    <script>
+        const lista = document.querySelector('#compras')
+
+        //somente leitura
+        console.log(lista.attributes)
+        console.log(lista.attributes[0])
+        console.log(lista.attributes.destino)
+       // console.log(lista.attributes.data-urgencia) //vai dar um erro
+        console.log(lista.attributes['data-urgencia'])
+    </script>
+</body>
+</html>

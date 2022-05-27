@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seleção de objetos</title>
+</head>
+<body>
+    <div id="teste" title="Testando">
+        <h1>DIV com ID</h1>
+    </div>
+
+    <div class="divClass">
+        com classe
+    </div>
+
+    <img name="image" src="../../Introducao ao DOM/img/img1.png" width="300" height="300" alt="imagem">
+
+    <span title="meu-span"></span>
+
+    <button class="btn" data-color="red">a</button>
+    <button class="btn" data-color="green">b</button>
+    <button class="btn" data-color="blue">c</button>
+
+    <script>
+        (function selecionar(win,doc){
+            console.log(doc.getElementById('teste'))
+            let teste = doc.getElementById('teste')
+            teste.className = 'novaClasse'
+            teste.style.color = 'red'
+            console.log(teste)
+
+            let myClass = doc.getElementsByClassName('divClass')
+            console.log(myClass)
+
+            let byName = doc.getElementsByName('image')
+            console.log(byName)
+
+            let byTag = doc.getElementsByTagName('h1')
+            console.log(byTag)
+
+            let byQuery = doc.querySelector('#teste')
+            console.log(byQuery)
+
+            let byQuery2 = doc.querySelector("[title = 'meu-span']")
+            console.log(byQuery2)
+
+            let queryAll = doc.querySelectorAll('.btn')
+            console.log(queryAll)
+
+            let botoes = doc.querySelectorAll('.btn')
+            for(let i = 0; i < botoes.length; i++){
+                botoes[i].addEventListener('click',function(){alert('clicou no botão ' + this.innerHTML)})
+            }
+
+            let coresBody = doc.querySelectorAll('.btn')
+            for(let i = 0; i < coresBody.length; i++){
+                coresBody[i].addEventListener('click',function(){
+                    doc.querySelector('body').style.backgroundColor = this.getAttribute('data-color')
+                    })
+            }
+
+        })(window,document)
+    </script>
+</body>
+</html>

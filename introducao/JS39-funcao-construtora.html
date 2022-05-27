@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Função Construtora</title>
+</head>
+<body>
+    
+
+    <script>
+        function Carro(velMaxima = 200, delta = 5){
+            //atributo privado
+            let velocidadeAtual = 0
+
+            //metodo publico
+            this.acelerar = function (){
+                if(velocidadeAtual + delta <= velMaxima){
+                    velocidadeAtual += delta
+                }else{
+                    velocidadeAtual = velMaxima
+                }
+            }
+
+            //metoso publico
+            this.getVelocidadeAtual = function () {
+                return velocidadeAtual
+            }
+        }
+
+        const uno = new Carro
+        uno.acelerar()
+        console.log(uno.getVelocidadeAtual())
+
+        const ferrari = new Carro(350,20)
+        ferrari.acelerar()
+        console.log(ferrari.getVelocidadeAtual())
+        ferrari.acelerar()
+        console.log(ferrari.getVelocidadeAtual())
+
+        console.log(typeof Carro)
+        console.log(typeof ferrari)
+    </script>
+</body>
+</html>

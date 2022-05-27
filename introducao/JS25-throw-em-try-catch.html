@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THROW em try catch</title>
+</head>
+<body>
+    <h1>THROW em try catch</h1>
+
+
+    <script>
+        var numero = prompt('informe um numero')
+
+        try{
+
+            if(numero == 100){
+                throw 'erro1' //esse throw é passado para o erro que é parametro do  catch
+            }
+
+            if(numero == 200){
+                throw 'erro2'
+            }
+
+            if(numero == 300){
+                throw 'erro3'
+            }
+
+        }catch(erro){
+
+            if(erro == 'erro1')
+            document.write('Deu o erro1')
+
+            if(erro == 'erro2')
+            document.write('Deu o erro2')
+
+            if(erro == 'erro3')
+            document.write('Deu o erro3')
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos</title>
+</head>
+<body>
+    <h1>Treinamento JS</h1>
+    <p>tipos referencia</p>
+
+    <script>
+        /*
+            tipos referencia
+
+                --objetos
+                --arrays
+                --functions
+
+             OBS: nesse arquivo vamos citar os objetos apenas   
+
+             objetos possuem >> (propriedades) que por sua vez possuem chave e valor
+
+             pessoa >> nome do objeto(identificaçaõ do objeto)
+             nome, idade e estaAprovado >> são as chaves
+             'junior', 28, true >> são valores 
+        */
+
+        let pessoa = {
+            nome: 'Junior',
+            idade: 28,
+            estaAprovado: true,
+
+        }
+
+        console.log(pessoa)
+        console.log('tipo de pessoa é: ', typeof(pessoa))
+        console.log(pessoa.nome)
+        console.log('o tipo da chave nome no objeto pessoa é: ', typeof(pessoa.nome))
+        console.log(pessoa.idade)
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strings</title>
+</head>
+<body>
+    <h1>Treinamento JS</h1>
+
+    <script>
+                    // strings
+
+        //tipo primitivo 
+        const mensagem = '  minha primeira mensagem'  //coloquei um espaçao antes pra usar o trim
+
+        //tipo objeto
+        const outraMensagem = new String('bom dia')
+
+        console.log(typeof(mensagem))
+        console.log(typeof(outraMensagem))
+        console.log(mensagem.length)
+        console.log(outraMensagem[2])
+        console.log(mensagem.includes('primeira'))
+        console.log(outraMensagem.includes('tarde'))
+        console.log(mensagem.startsWith('minha'))
+        console.log(outraMensagem.endsWith('dia'))
+        console.log(mensagem.indexOf('mensagem'))
+        console.log(outraMensagem.replace('dia', 'tarde'))
+        console.log(mensagem)
+        console.log(mensagem.trim())
+        console.log(mensagem.split(' ')) //ele pegou os espaços tbm e quebra
+    </script>
+</body>
+</html>

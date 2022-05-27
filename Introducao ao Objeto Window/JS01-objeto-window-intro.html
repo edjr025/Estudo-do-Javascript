@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objeto Window</title>
+</head>
+<body>
+    <h1>Objeto Window Inner e Outer Width e Height, ScreenX e ScreenY</h1>
+
+    <p id="msg"></p>
+    <p id="msg2"></p>
+    <p id="msg3"></p>
+    <p id="msg4"></p>
+    <p id="msg5"></p>
+    <p id="msg6"></p>
+    <p id="msg7"></p>
+
+    <script>
+            //não se usa essa notação, isso é apenas para demostrar o objeto window
+            window.document.getElementById('msg').innerHTML = 'texto'
+
+            var largura = window.innerWidth
+            var altura = window.innerHeight
+
+            var larguraVariavel = window.outerWidth
+            var alturaVariavel = window.outerHeight
+
+            var telax = window.screenX
+            var telay = window.screenY
+
+            document.getElementById('msg2').innerHTML = largura
+            document.getElementById('msg3').innerHTML = altura
+
+            //precisa ficar atualizando a pagina para mostrar os valores quando a janela muda de tamanho
+            document.getElementById('msg4').innerHTML = 'a largura é: ' + larguraVariavel
+            document.getElementById('msg5').innerHTML = 'a altura é: ' + alturaVariavel
+
+            document.getElementById('msg6').innerHTML = telax
+            document.getElementById('msg7').innerHTML = telay
+
+
+
+
+    </script>
+</body>
+</html>

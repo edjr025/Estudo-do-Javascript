@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos parte IV</title>
+
+</head>
+<body onresize="redimensionar()">
+
+    <h1>Eventos  onresize, onselect, onfocus e onblur</h1>
+
+    <p id="texto"></p>
+
+    <form>
+        <fieldset>
+            <input type="text" onselect="selecionado()">
+            <input type="text" onfocus="focar()" placeholder="clique aqui">
+            <input type="text" onblur="tirarFoco()" placeholder="clique e tire o foco">
+        </fieldset>  
+        
+    </form>
+
+
+    <script>
+        //ao alterar as dimensões da pagina essa função será dispara pelo evento onresize
+       function redimensionar(){
+           document.getElementById('texto').innerHTML = 'Pagina redimensionada'
+           alert('pagina sendo redimensionada')
+       }
+
+       //escreva algo no input e selecione esse texto digitado
+       function selecionado(){
+           document.getElementById('texto').innerHTML = 'texto do input selecionado'
+       }
+
+       function focar(){
+           document.getElementById('texto').innerHTML = 'você deu foco ao segundo input'
+       }
+
+       function tirarFoco(){
+        document.getElementById('texto').innerHTML = 'você tirou o foco do terceiro input'
+       }
+    
+    </script>
+</body>
+</html>

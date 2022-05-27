@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Função Find</title>
+</head>
+<body>
+    <h1>Metodos Avançados de Array(Find)</h1>
+
+    <p id="msg"></p>
+    <p id="msg1"></p>
+    <p id="msg2"></p>
+    <p id="msg3"></p>
+    
+
+
+    <script>
+        
+        const pizza = ['Mussarela', 'calabresa', 'Portuguesa', 'Marguerita']
+        document.getElementById('msg').innerHTML = pizza
+        //vai pegar o primeiro valor que satisfaça a pesquisa
+        const foundPizza = pizza.find((p => p.startsWith('M')))
+        document.getElementById('msg1').innerHTML = foundPizza
+
+        const frutas = [
+            {name: 'Jaca', quantidade: 2},
+            {name: 'Cereja', quantidade: 0},
+            {name: 'Caqui', quantidade: 5},
+        ]
+
+        const foundFruta = frutas.find(f => f.name == 'Cereja')
+        document.getElementById('msg3').innerHTML = foundFruta.name
+
+        console.log(foundFruta)
+        
+    </script>
+</body>
+</html>

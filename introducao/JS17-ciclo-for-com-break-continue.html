@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciclo FOR Break e Continue</title>
+</head>
+<body>
+    <h1>Loop FOR com Break e Continue</h1>
+
+
+    <script>
+        //nesse loop os valores serão printados até o 4
+      for(var i=0; i < 10 ; i++){
+          if(i == 5){
+              break
+          }
+          document.write(i, '</br>')
+      }
+
+      document.write('</br>')
+      document.write('</br>')
+
+      //nesse loop os valores serão printadoscom o numero 5 sendo 'pulado'
+      for(var i=0; i < 10 ; i++){
+          if(i == 5){
+              continue
+          }
+          document.write(i, '</br>')
+      }
+    
+    </script>
+</body>
+</html>

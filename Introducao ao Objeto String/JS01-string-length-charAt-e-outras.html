@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objeto String Introdução</title>
+</head>
+<body>
+    <h1> Introdução a Strings -  Length, CharAt, CharCodeAt e Concat</h1>
+
+    <p id="msg"></p>
+    <p id="msg2"></p>
+    <p id="msg3"></p>
+    <p id="msg4"></p>
+    <p id="msg5"></p>
+
+    <script>
+        var minhaFrase = 'aprendendo javascript'
+
+        var nome = 'Edvaldo '
+         //acima é a mesma coisa que:
+        // var minhaFrase = new String('aprendendo javascript')
+
+        //pegando o tamanho da string 
+        document.getElementById('msg').innerHTML = minhaFrase.length
+
+        //pegando a letra pelo seu indice 
+        document.getElementById('msg2').innerHTML = minhaFrase.charAt(11)
+
+        //pegando a ultima letra da string
+        document.getElementById('msg3').innerHTML = nome.charAt(nome.length -1)
+
+        //pegando o charCode de uma letra da string atraves do seu indice
+        document.getElementById('msg4').innerHTML = nome.charCodeAt(3)
+
+        //concatenando frases com o concat
+        var frase = nome.concat(minhaFrase)
+        document.getElementById('msg5').innerHTML = frase
+
+
+    </script>
+</body>
+</html>

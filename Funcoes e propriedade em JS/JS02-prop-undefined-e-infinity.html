@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undefined e Infinity </title>
+</head>
+<body>
+    <h1>Propriedades globais Undefined e Infinity</h1>
+
+   <p id="msg"></p>
+   <p id="msg2"></p>
+   <p id="msg3"></p>
+   <p id="msg4"></p>
+
+    <script>
+        var nome 
+
+        var valor = 1.74552144E+10354
+
+        var numero = 456544674897465464578412
+
+        //forçando um undefined
+        document.getElementById('msg').innerHTML = nome
+
+        if(nome != undefined){
+            document.getElementById('msg').innerHTML = 'a variavel nome tem um valor  definido' 
+        }else{
+            document.getElementById('msg').innerHTML = 'a variavel nome não tem um valor  definido' 
+        }
+
+        //forçando um infinity
+        document.getElementById('msg2').innerHTML = valor
+
+         //mostrando um valor grande
+         document.getElementById('msg3').innerHTML = numero
+
+         if(valor == Infinity){
+            document.getElementById('msg4').innerHTML = 'esse valor não é suportado pelo javascript' 
+         }else{
+            document.getElementById('msg4').innerHTML = 'esse valor é suportado pelo javascript' 
+         }
+       
+    </script>
+</body>
+</html>

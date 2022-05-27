@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Try catch e finally</title>
+</head>
+<body>
+    <h1>Try catch e finally</h1>    
+
+    <p id="info"></p>
+
+    <script>
+
+        var el = document.getElementById('info')
+
+        try {
+            //funçaõ somar não declara, isso vai forçar o erro aqui, caindo no catch
+            somar(10,20)
+            el.innerHTML = 'estou dentro do try'
+        } catch (error) {
+            el.innerHTML = 'Aconteceu um erro'
+            //finally será executado independente do que acontece
+        }finally{
+            el.innerHTML += '</br>Independente de cair no try ou no catch eu sou executado'
+        }
+    </script>
+</body>
+</html>

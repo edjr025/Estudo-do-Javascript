@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reduce</title>
+</head>
+<body>
+    <script>
+        const alunos = [
+            {nome: 'João', nota: 7.3, bolsista: false},
+            {nome: 'Maria', nota: 9.2, bolsista: true},
+            {nome: 'Pedro', nota: 3.5, bolsista: false},
+            {nome: 'Bia', nota: 4.9, bolsista: true},
+        ]
+
+       //desafio 1: todos os alunos são bolsistas?
+       //let resultado = alunos.map(e => e.bolsista == true).reduce((acc,atual) => acc + atual)
+       //console.log(resultado)
+
+       const todosBolsistas = (resultado, bolsista) => resultado && bolsista
+       console.log(alunos.map(a => a.bolsista).reduce(todosBolsistas))
+
+
+        //desafio 2: algum aluno é bolsistas?
+        const algumBolsista = (resultado, bolsista) => resultado || bolsista
+        console.log(alunos.map(a => a.bolsista).reduce(algumBolsista))
+    </script>
+</body>
+</html>

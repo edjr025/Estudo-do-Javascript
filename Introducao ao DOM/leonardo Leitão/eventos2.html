@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos 2</title>
+    <style>
+        div{
+            padding: 25px;
+            background-color: blueviolet;
+            color: white;
+            font-size: 15px;
+            border: 1px solid white;
+            width: 100px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="caixa">elemento</div>
+
+    <script>
+        /*NÃO FUNCIONOU  >>> esse codigo seria para mover a div pela pagina*/
+        const item = document.querySelector('div')
+        item.style.position = 'absolute'
+
+        item.onmousemove = e => {
+            const item = e.target
+            item.style.cursor = 'move'
+            if(e.buttons){
+                item.style.top = `${e.clientY - (item.clientHeight / 2)} px`
+                item.style.left = `${e.clientX - (item.clientWidth / 2)} px`
+            }
+        }
+    </script>
+</body>
+</html>

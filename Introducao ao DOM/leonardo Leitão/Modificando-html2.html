@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modificando o HTML</title>
+    <style>
+         .destaque{
+            border: 1px solid red;
+            padding: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <p>Texto Inicial</p>
+    </div>
+
+    <script>
+       const div = document.querySelector('div')
+       div.innerHTML = 'Texto alterado'
+       //div.outerHTML = 'texto alterado' não é muito usado
+       div.insertAdjacentHTML('beforeBegin', '<p> antes inicio</p>')
+       div.insertAdjacentHTML('afterBegin', '<p>Depois Inicio</p>')
+       div.insertAdjacentHTML('beforeend', '<p>Antes Fim</p>')
+       div.insertAdjacentHTML('afterend', '<p>depois Fim</p>')
+       
+       //somente texto(sem tags)
+       console.log(div.innerText)
+
+       //com tag
+       console.log(div.innerHTML)
+
+    </script>
+</body>
+</html>

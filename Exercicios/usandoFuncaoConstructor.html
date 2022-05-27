@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usando a função Constructor</title>
+</head>
+<body>
+    <h1>Treinamento JS</h1>
+
+    <script>
+        function Postagem(titulo, msg, autor){
+            this.titulo = titulo
+            this.msg = msg
+            this.autor = autor
+            this.visualizacoes = 0
+            this.comentarios = []
+            this.estaaovivo = false
+        }
+
+        postagem1 = new Postagem('meu post', 'esse post fala de tec', 'junior', 10, 'muito bom',true)
+        console.log(postagem1)
+    </script>
+</body>
+</html>

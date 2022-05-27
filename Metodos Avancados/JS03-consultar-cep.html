@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta CEP</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+
+    <h1>Consulta CEP</h1>
+    <div class="container">
+        <form>
+           <div class="form-group">
+               <label for="cep">CEP</label>
+               <input type="text" class="form-control" maxlength="9" id="cep">
+               <small>00000-000</small>
+            </div>
+           <div class="form-group">
+               <label for="logradouro">Logradouro</label>
+               <input type="text" class="form-control" id="logradouro">
+               <small>Rua.</small>
+            </div>
+           <div class="form-group">
+               <label for="bairro">Bairro</label>
+               <input type="text" class="form-control" id="bairro">
+               <small>Bairro</small>
+            </div>
+           <div class="form-group">
+               <label for="localidade">localidade</label>
+               <input type="text" class="form-control" id="localidade">
+               <small>Cidade</small></div>
+           <div class="form-group">
+               <label for="uf">Estado</label>
+               <input type="text" class="form-control" id="uf">
+               <small>Estado</small>
+            </div>
+
+        </form>
+    </div>
+
+    <script>
+        const cep = document.querySelector('#cep')
+
+        const showData = (result) => {
+            for(const campo in result){
+                if(document.querySelector('#'+campo)){
+                    document.querySelector('#'+campo).value = result[campo]
+                    console.log(campo)
+                }
+            }
+        }
+
+        cep.addEventListener('blur',(e) =>{
+            let search = cep.value.replace('-','')
+            const options = {
+                method: 'GET',
+                mode: 'cors',
+                cache: 'default'
+            }
+
+            fetch(`https://viacep.com.br/ws/${search}/json/`, options)
+            .then(response => {
+                response.json()
+                .then(data => showData(data))})
+            .catch(e => console.log('Deu ruim' + e.message))
+    
+
+        })
+    </script>
+</body>
+</html>

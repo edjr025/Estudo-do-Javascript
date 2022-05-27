@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo do Dado</title>
+</head>
+<body>
+    <h1>Jogo do Dado</h1>
+
+    <img id="face" src="face1.png" alt="dado">
+
+    <button onclick="jogarDado()">JOGAR O DADO</button>
+
+    <script>
+       
+
+       function jogarDado(){
+        //vamos somar +1 pois não existe a face 0 no dado
+        var sorteio = Math.floor(Math.random() * 6 + 1);
+
+        switch(sorteio){
+            case 1: 
+                document.getElementById('face').src = 'face1.png'
+            break; 
+            
+            case 2: 
+                document.getElementById('face').src = 'face2.png'
+            break;  
+
+            case 3: 
+                document.getElementById('face').src = 'face3.png'
+            break;  
+
+            case 4: 
+                document.getElementById('face').src = 'face4.png'
+            break;  
+
+            case 5: 
+                document.getElementById('face').src = 'face5.png'
+            break;  
+
+            case 6: 
+                document.getElementById('face').src = 'face6.png'
+            break; 
+            default: 
+              // caso contrario
+
+        }
+       }
+    </script>
+</body>
+</html>

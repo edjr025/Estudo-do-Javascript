@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vericar existencia de propriedade em objetos</title>
+</head>
+<body>
+    <script>
+
+        let obj = {
+            nome: 'Junior',
+            idade: 28
+        }
+
+        console.log('telefone' in obj) // isso aqui ta perguntandp, existe propriedade telefone em Obj
+
+        if('telefone' in obj){
+            console.log(obj.telefone)
+        }else{
+            console.log('não existe a propriedade telefone no objeto obj')
+        }
+
+        //mostrando o valor das chaves do objeto
+        let pessoa = {
+            nome: 'joão',
+            idade: 50,
+            telefone: 25146364
+        }
+        // com esse for iremos mostrar as propriedade com os seus respectivos valores
+        for (const chave in pessoa) {
+           console.log(chave + ' = ' + pessoa[chave])
+        }
+
+
+       
+           // outro exemplo abaixo
+
+           let zonas = {
+               4: 'loja',
+               105: 'fabrica',
+               1: 'Armazen',
+               0: 'Escritorio'
+           }
+
+           //ele acaba ordenando as propriedade por ordem crescente das suas chaves
+           for (const key in zonas) {
+               console.log(key)
+           }
+           //aqui ele continua repeitando a ordem crescente relacionado as chaves das propriedades
+           for (const key in zonas) {
+               console.log(zonas[key])
+           }
+
+        
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document links</title>
+</head>
+<body>
+    <h1> document links array de hiperligações do DOM</h1>
+
+    
+
+    <p class="msg"></p>
+    <p></p>
+    <p class="msg"></p>
+    <p</p>
+    <p class="msg"></p>
+
+    <br>
+    <br>
+
+    <span class="text"></span><br>
+    <span>sem classe</span><br>
+    <span>sem classe</span><br>
+    <span class="text"></span><br>
+    <span>sem classe</span><br>
+    <span class="text"></span><br>
+    <span>sem classe</span><br>
+
+    <br>
+    <br>
+
+    <div class="texto"></div>
+    <div id="texto"></div>
+    <div>sem id e sem class</div>
+
+    <script>
+        //usando o getElementByClassName
+       var paragrafos =  document.getElementsByClassName('msg')
+       //console.log(paragrafos)
+
+       paragrafos[0].innerHTML = '1º paragrafo com Classe'
+       paragrafos[1].innerHTML = '2º paragrafo com Classe'
+       paragrafos[2].innerHTML = '3º paragrafo com Classe' 
+
+
+       var spans = document.getElementsByClassName('text')
+       //console.log(spans)
+
+       for(i=0;i<spans.length; i++){
+            spans[i].innerHTML = 'essa span tem classe'
+            spans[i].style.backgroundColor = 'red'
+            spans[i].style.color = 'white'
+       }
+
+       //usando o document.querySelector
+       var text1 = document.querySelector('.texto')
+       var text2 = document.querySelector('#texto')
+
+       text1.innerHTML = 'usando o query selector com a classe'
+       text2.innerHTML = 'usando o query selector com o ID'
+
+       //existe tbm o querySelectorAll
+       
+
+       
+    </script>
+</body>
+</html>

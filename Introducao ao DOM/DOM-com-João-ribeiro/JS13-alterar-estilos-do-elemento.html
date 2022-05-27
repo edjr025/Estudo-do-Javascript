@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .p-1{
+            background-color: yellow;
+            color: black;
+            padding: 10px;
+            border: 1px solid gray;
+        }
+    </style>
+</head>
+<body>
+    <p class="p-1">Lorem ipsum dolor sit amet.</p>
+
+    <script>
+        let p = document.querySelector('p')
+
+        p.style.backgroundColor = 'green'
+        p.style.fontFamily = 'Arial'
+        p.style.border = '3px solid red'
+        p.style.cssText = 'font-size: 80px' //com o cssText vc pode colocar as propreidade sem ser com camelcase
+    </script>
+</body>
+</html>

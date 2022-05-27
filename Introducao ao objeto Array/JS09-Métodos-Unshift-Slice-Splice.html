@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Métodos Unshift, Slice e Splice</title>
+</head>
+<body>
+    <h1>Métodos Unshift, Slice e Splice</h1>
+
+    <p id="msg"></p>
+    <p id="tam"></p>
+
+    <script>
+       var nomes = ['Andre', 'Bruna','Carlos', 'Daniel']
+       var times = ['Flamengo', 'Vasco', 'Palmeiras', 'Corinthians']
+
+       document.write('o array de nomes é: ', nomes, '</br>')
+       document.write('o array de times é: ', times)
+       document.write('</br>')
+
+       //usando o metodo Unshift pra inserir um valor no inicio do array
+       document.write('incluindo um valor no inicio do array: ', nomes.unshift('Karina'), '</br>')
+       document.write('o novo array de nomes é: ', nomes, '</br>')
+       document.write('</br>')
+
+       //usando o metodo Slice para criar um array a partir de um array existente
+       var timesPaulistas = times.slice(2) //passamos o 2 como parametro pra pega o item de indice 2 pra frente
+       document.write('O array de times Paulistas é: ', timesPaulistas, '</br>')
+       document.write('</br>')
+
+       var aprovados = nomes.slice(1,4) //cortando o array nomes da posição 1 até a 3(obs: nesse caso temos q colocar 4 para pegar a posição 3) 
+       document.write('Os aprovados são: ', aprovados, '</br>')
+       document.write('</br>')
+
+       
+       //usando o metodo Splice para adcionar elementos no array a partir de um indice que é passado como parametro
+      /*
+        o splice pode receber 3 parametros array.splice(1,0,'teste')
+        1 > é o valor do indice que começa as inserções
+        0 > é pra informa se vai ou não substituir o valor existente pelo novo valor q ta
+        entrando(no caso 0 significa  q não vai tirar valores)
+
+        'teste' é o valor q estamos inserindo
+      */
+
+      times.splice(1,0,'Cruzeiro')
+      document.write('Os array de times agora é: ', times)
+      document.write('</br>')
+
+      nomes.splice(2,1,'Julieta', 'Fernando', 'Barbara')
+      document.write('Os array de nomes agora é: ', nomes)
+      document.write('</br>')
+
+
+
+    </script>
+</body>
+</html>

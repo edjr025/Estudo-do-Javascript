@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> this</title>
+</head>
+<body>
+    <h1> this</h1>
+
+    <script>
+        /*this*/  
+
+        // em escopo global o this se refere sempre ao objeto window
+        console.log(this)
+
+        function teste(){
+            //dentro de uma função o this tbm se refere ao objeto window
+            console.log(this)
+        }
+
+        teste()
+
+
+        let objeto = {
+            name: 'Thiago',
+            func: function(){
+                //quando chamamos o this dentro de um objeto ele se refere ao proprio objeto
+                console.log(this)
+            }
+        }
+
+        objeto.func()
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factory Function</title>
+</head>
+<body>
+    <h1>Treinamento JS</h1>
+
+    <script>
+         const celular = {
+            marca: 'ASUS',
+            tamanhoTela: {
+                vertical: 155,
+                horizontal: 75
+            },
+            capacidadeBateria: 500,
+            ligar: function(){
+                console.log('ligando.....')
+            }
+
+        }
+
+        //factory function aqui !!!
+        function criarCelular(marca, tamanhoTela, capacidadeBateria){
+            return{
+                marca,
+                tamanhoTela,
+                capacidadeBateria,
+                ligar(){
+                    console.log('fazendo ligação ...')
+                }
+            }
+        }
+
+        //criando um celular com a função de fabrica criarCelular()
+        //colocar o metodo criarCelular dentro de uma variavel
+        let celular1 = criarCelular('LG',55,5000)
+        console.log(celular1)
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clonagem de objetos</title>
+</head>
+<body>
+    <script>
+        //metodo 1
+
+        let user1 = {
+            nome: 'joão'
+        }
+
+        let user2 = {}
+
+        for (const key in user1) {
+            user2[key] = user1[key]
+        }
+
+        console.log(user1.nome)
+        console.log(user2.nome)
+
+        user2.nome = 'carlos'
+        console.log(user1.nome)
+        console.log(user2.nome)
+
+        //metodo 2
+
+        let usuario1 = {
+            nome: 'Marcelo'
+        }
+
+        let usuario2 = {}
+
+        Object.assign(usuario2, usuario1)
+        console.log(usuario1.nome)
+        console.log(usuario2.nome)
+        usuario2.nome = 'Ricardo'
+        console.log(usuario1.nome)
+        console.log(usuario2.nome)
+
+    </script>
+</body>
+</html>

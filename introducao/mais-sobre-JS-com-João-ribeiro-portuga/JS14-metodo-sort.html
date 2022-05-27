@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodo sort</title>
+</head>
+<body>
+    <script>
+        let nomes = ['Pedro', 'João', 'Ana', 'Sandra', 'Maria', 'Yasmin', 'Bruno']
+        console.log(nomes.sort())
+
+        let numeros = [5, 2, 9, 1, 85, 0, 23]
+        console.log(numeros.sort()) //não ordena numero de forma pefeita pois aqui ele trasforma os nuemros em string
+
+        /*
+            para ordenar numeros iremos criar uma função auxiliar
+        */
+
+        function comparar(a,b){
+            if(a > b) return 1;
+            if(a == b) return 0;
+            if(a < b) return -1;
+        }
+
+        console.table(numeros.sort(comparar))
+    </script>
+</body>
+</html>

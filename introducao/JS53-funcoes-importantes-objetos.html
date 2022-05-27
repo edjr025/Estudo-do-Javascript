@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções importantes de objetos</title>
+</head>
+<body>
+    <script>
+        const pessoa = {
+            nome: 'Rebeca',
+            idade: 2,
+            peso: 13
+        }
+
+        console.log(Object.keys(pessoa))
+        console.log(Object.values(pessoa))
+        console.log(Object.entries(pessoa))
+
+        Object.entries(pessoa).forEach(([chave, valor]) =>{ //([chave, valor]) com isso aqui estamos destruturando o array
+            console.log(`${chave}: ${valor}`)
+        })
+        Object.defineProperty(pessoa, 'dataNascimento',{
+            enumerable: true,
+            writable: false,
+            value: '01/01/2019'
+        })
+
+        pessoa.dataNascimento = '01/02/2018'
+        console.log(pessoa.dataNascimento) // ele não vai deixar pq esta writable false
+
+        console.log(Object.keys(pessoa))
+
+        //object.assign (ECMAScript 2015)
+        const destino = {a: 1}
+        const obj1 = {b:2}
+        const obj2 = {c:3}
+        const obj3 = {d:4, e:5}
+        const objetoFusao = Object.assign(destino,obj1,obj2,obj3)
+        console.log(objetoFusao)
+    </script>
+</body>
+</html>

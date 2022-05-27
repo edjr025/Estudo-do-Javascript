@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ForEach</title>
+</head>
+<body>
+    
+    <script>
+        //criando o nosso proprio foreach  nomramos ele com o nome foreach 2
+        Array.prototype.forEach2 = function (callback){
+            for(let i = 0; i < this.length; i++){
+                callback(this[i], i, this) //esses três paramtros são os unicos q pode ser passado para essa callback
+            }
+        }
+        const aprovados = ['Agatha', 'Alan', 'Daniel', 'Raquel']
+
+        aprovados.forEach2(function(nome,indice){
+            console.log(`${indice + 1} - ${nome}`)
+        })
+
+        
+    </script>
+</body>
+</html>

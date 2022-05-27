@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tipo valor e tipo referencia</title>
+</head>
+<body>
+    <script>
+        //as variaveis são copiadas por valor exemplo abaico
+        let nome1 = 'joao'
+        let nome2 = nome1
+
+        console.log(nome1)
+        console.log(nome2)
+
+        nome2 = 'ana'
+        console.log(nome1)
+        console.log(nome2)
+
+        //os objetos e os arrays são copiados por referencia
+        //quando vc muda uma propriedade de um objeto vc muda a dele e a do outro q ele referencia
+
+        const cliente1 = {
+            nome: 'pedro'
+        }
+
+        const cliente2 = cliente1
+        console.log(cliente1.nome)
+        console.log(cliente2.nome)
+
+        cliente1.nome = 'Maria'
+
+        console.log(cliente1.nome)
+        console.log(cliente2.nome)
+
+        //na comparação de objetos, ele só são iguais se foramo meso objeto
+
+        let obj1 = {
+            valor: 10
+        }
+
+        let obj2 = {
+            valor: 20
+        }
+
+        if(obj1 == obj2){
+            console.log('iguais')
+        }else{
+            console.log('diferentes')
+        }
+
+        //agora ou dizer q o obj1 recebera o obj2
+        obj1 = obj2
+        if(obj1 == obj2){
+            console.log('iguais')
+        }else{
+            console.log('diferentes')
+        }
+
+
+        
+    </script>
+</body>
+</html>
